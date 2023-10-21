@@ -3,3 +3,11 @@ html,body{
     padding: 0;
     background-color: #262a2e;
 }
+body::-webkit-scrollbar{
+	width: 6px;
+	background-color: #262a2e;
+}
+body::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #000000;
+}
