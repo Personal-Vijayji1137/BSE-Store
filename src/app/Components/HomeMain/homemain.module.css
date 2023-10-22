@@ -141,6 +141,7 @@
     margin: 1rem 4rem;
     font-family: 'Nunito',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 .OurBlog{
     display: flex;
     justify-content: space-between;
@@ -205,3 +206,4 @@
 .ReadMoreBtn:hover{
     color: #ff0000;
 }
+

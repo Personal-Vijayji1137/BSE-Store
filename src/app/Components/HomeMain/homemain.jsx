@@ -1,6 +1,8 @@
 import Styles from "./homemain.module.css"
 import Image from "next/image"
 import Link from "next/link"
+import JoinWithUS from "./joinwithus"
+import HomeTV from "./hovetv"
 export default function HomeMain(){
     return(
         <>
@@ -88,6 +90,8 @@ export default function HomeMain(){
                 <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
             </div>
            </div>
+           <JoinWithUS/>
+           <HomeTV/>
         </>
     )
 }

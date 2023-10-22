@@ -1,0 +1,79 @@
+.HomeTV{
+    display: flex;
+    width: 90%;
+    margin: 8rem;
+}
+.HomeTV > div{
+    width: 47%;
+}
+.HomeTV > div:nth-child(1){
+    align-items: center;
+}
+.HomeTV > div:nth-child(1) > div{
+    color: white;
+    font-size: 3rem;
+    font-family: 'Concert One',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.HomeTV > div:nth-child(1) > p{
+    color: #8d8d8d;
+    font-family: 'Nunito',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.HomeTV > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+.HomeTV > div > img{
+    width: 50%;
+    height: 100%;
+}
+.box {
+    --border-radius: 4vmin;
+    --bg: #3A3544;
+    --color: #D0BCFF;
+    --deg: 30deg;
+    -webkit-perspective: 200px;
+    perspective: 200px;
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+    max-width: 350px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background: none;
+}
+.button {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateY(var(--deg));
+    transform: rotateY(var(--deg));
+    -webkit-transition: all 800ms ease-in-out;
+    transition: all 800ms ease-in-out;
+    border-radius: 10px;
+    font-style: normal;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    letter-spacing: 0.03vmin;
+    padding: 1.3vmin 2.5vmin;
+    background: var(--bg);
+    color: var(--color);
+    font-family: 'Nunito',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: rgba(255, 0, 0, 0.1) 0px 8px 24px, rgba(255, 0, 0, 0.1) 0px 16px 56px, rgba(255, 0, 0, 0.148) 0px 24px 80px;
+}
+.button:hover {
+    -webkit-transform: rotateY(calc(-1 * var(--deg)));
+    transform: rotateY(calc(-1 * var(--deg)));
+}
+.box:active .button {
+    -webkit-transform: rotateY(calc(-1 * var(--deg) / 3));
+    transform: rotateY(calc(-1 * var(--deg) / 3));
+}
+.box:focus .button {
+    border: 0.05vmin solid var(--color);
+}
+  
