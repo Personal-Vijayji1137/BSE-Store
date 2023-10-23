@@ -25,6 +25,7 @@
 .HomeTV > div > img{
     width: 50%;
     height: 100%;
+    filter: drop-shadow(5px -8px 120px rgb(255, 17, 0));
 }
 .box {
     --border-radius: 4vmin;

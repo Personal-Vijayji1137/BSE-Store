@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import JoinWithUS from "./joinwithus"
 import HomeTV from "./hovetv"
+import HomeShop from "./homeshop"
 export default function HomeMain(){
     return(
         <>
@@ -60,38 +61,40 @@ export default function HomeMain(){
                 </div>
             </div>
            </div>
+           
            <div className={Styles.OurBlog}>
                 <div>Our Blogs</div>
                 <Link href="/blogs" className={Styles.Btn}>All Articles</Link>
             </div>
            <div className={Styles.OurBlogs}>
-            <div>
                 <div>
-                    <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                    <div>
+                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                    </div>
+                    <div>This is heading to one line and it can be more...</div>
+                    <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                    <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
                 </div>
-                <div>This is heading to one line and it can be more...</div>
-                <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
-                <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
-            </div>
-            <div>
                 <div>
-                    <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                    <div>
+                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                    </div>
+                    <div>This is heading to one line and it can be more...</div>
+                    <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                    <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
                 </div>
-                <div>This is heading to one line and it can be more...</div>
-                <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
-                <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
-            </div>
-            <div>
                 <div>
-                    <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                    <div>
+                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                    </div>
+                    <div>This is heading to one line and it can be more...</div>
+                    <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                    <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
                 </div>
-                <div>This is heading to one line and it can be more...</div>
-                <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
-                <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
-            </div>
            </div>
            <JoinWithUS/>
            <HomeTV/>
+           <HomeShop/>
         </>
     )
 }
