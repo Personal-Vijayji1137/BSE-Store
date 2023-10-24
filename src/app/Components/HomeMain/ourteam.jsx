@@ -7,7 +7,7 @@ export default function OurTeam(){
         <div className={Styles.OurTeam}>
             <div>
                 <div>Meet our amazing Team</div>
-                <div>"Our awesome team builds and takes care of websites for you. They make sure your website looks great and works well all the time. You can rely on them to make your online ideas come true."</div>
+                <div>&quot;Our awesome team builds and takes care of websites for you. They make sure your website looks great and works well all the time. You can rely on them to make your online ideas come true.&quot;</div>
             </div>
             <div>
                 <div>
