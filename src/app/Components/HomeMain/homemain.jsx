@@ -4,6 +4,7 @@ import Link from "next/link"
 import JoinWithUS from "./joinwithus"
 import HomeTV from "./hovetv"
 import HomeShop from "./homeshop"
+import OurTeam from "./ourteam"
 export default function HomeMain(){
     return(
         <>
@@ -95,6 +96,7 @@ export default function HomeMain(){
            <JoinWithUS/>
            <HomeTV/>
            <HomeShop/>
+           <OurTeam/>
         </>
     )
 }
