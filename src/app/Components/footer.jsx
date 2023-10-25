@@ -43,7 +43,6 @@ export default function Footer(){
                             <Link href="/"><li>Horror...</li></Link>
                             <Link href="/"><li>Trailler...</li></Link>
                             <Link href="/"><li>Adventure...</li></Link>
-                            <Link href="/"><li>Adult...</li></Link>
                         </ul>
                     </div>
                 </div>
