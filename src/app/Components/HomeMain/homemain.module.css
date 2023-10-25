@@ -98,6 +98,7 @@
 }
 .BottomBanner > img{
     width: 100%;
+    height: 150%;
 }
 .AboutBSE{
     display: flex;
