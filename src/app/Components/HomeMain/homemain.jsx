@@ -22,7 +22,7 @@ export default function HomeMain(){
                 </div>
            </main>
            <div className={Styles.BottomBanner}>
-               <img src="/BottomBanner.svg" alt=""/>
+               <Image src="/BottomBanner.svg" width={1000} height={1000} alt=""/>
            </div>
            <div className={Styles.AboutBSE}>
             <div>
