@@ -15,7 +15,7 @@ export default function HomeTV(){
                 </Link>
             </div>
             <div>
-                <Image src="/TV.png" width={1000} height={1000}/>
+                <Image src="/TV.png" width={1000} height={1000} alt=""/>
             </div>
         </div>
         </>

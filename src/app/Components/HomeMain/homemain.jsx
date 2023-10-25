@@ -18,18 +18,18 @@ export default function HomeMain(){
                     </div>
                 </div>
                 <div className={Styles.DivTwo}>
-                    <Image className={Styles.BannerImage} src="/HomeBanner.png" width={1000} height={1000}/>
+                    <Image className={Styles.BannerImage} src="/HomeBanner.png" width={1000} height={1000} alt=""/>
                 </div>
            </main>
            <div className={Styles.BottomBanner}>
-               <img src="/BottomBanner.svg"/>
+               <img src="/BottomBanner.svg" alt=""/>
            </div>
            <div className={Styles.AboutBSE}>
             <div>
                 <div>
                     <div>
-                        <Image src="/B-Red.png" width={500} height={500}/>
-                        <Image src="/BB-Red.svg" width={500} height={500}/>
+                        <Image src="/B-Red.png" width={500} height={500} alt=""/>
+                        <Image src="/BB-Red.svg" width={500} height={500} alt=""/>
                     </div>
                 </div>
                 <div>
@@ -40,8 +40,8 @@ export default function HomeMain(){
             <div>
                 <div>
                     <div>
-                        <Image src="/G-Green.png" width={500} height={500}/>
-                        <Image src="/GG-Green.svg" width={500} height={500}/>
+                        <Image src="/G-Green.png" width={500} height={500} alt=""/>
+                        <Image src="/GG-Green.svg" width={500} height={500} alt=""/>
                     </div>
                 </div>
                 <div>
@@ -52,8 +52,8 @@ export default function HomeMain(){
             <div>
                 <div>
                     <div>
-                        <Image src="/Y-Yellow.png" width={500} height={500}/>
-                        <Image src="/YY-Yellow.svg" width={500} height={500}/>
+                        <Image src="/Y-Yellow.png" width={500} height={500} alt=""/>
+                        <Image src="/YY-Yellow.svg" width={500} height={500} alt=""/>
                     </div>
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export default function HomeMain(){
            <div className={Styles.OurBlogs}>
                 <div>
                     <div>
-                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500} alt=""/>
                     </div>
                     <div>This is heading to one line and it can be more...</div>
                     <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
@@ -78,7 +78,7 @@ export default function HomeMain(){
                 </div>
                 <div>
                     <div>
-                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500} alt=""/>
                     </div>
                     <div>This is heading to one line and it can be more...</div>
                     <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
@@ -86,7 +86,7 @@ export default function HomeMain(){
                 </div>
                 <div>
                     <div>
-                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500}/>
+                        <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500} alt=""/>
                     </div>
                     <div>This is heading to one line and it can be more...</div>
                     <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>

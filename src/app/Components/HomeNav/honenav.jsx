@@ -8,7 +8,7 @@ export default function HomeNav(){
                 <div className={styles.nav}>
                     <div className={styles.divlog}>
                         <Link href="/" className={styles.divlog}>
-                            <Image src="/logo.webp" width={40} height={40} className={styles.logo}/>
+                            <Image src="/logo.webp" width={40} height={40} className={styles.logo} alt=""/>
                             <h1 className={styles.logotext}>BSE-Store</h1>
                         </Link>
                     </div>

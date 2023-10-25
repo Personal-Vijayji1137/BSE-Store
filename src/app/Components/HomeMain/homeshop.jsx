@@ -8,7 +8,7 @@ export default function HomeShop(){
                 <div>View Our Shop</div>
                 <div className={Styles.HomeShop}>
                 <div>
-                    <Image src="/ShopGirl.png" width={1000} height={1000}/>
+                    <Image src="/ShopGirl.png" width={1000} height={1000} alt=""/>
                 </div>
                 <div>
                     <div>Discover New <br/>Collection</div>
