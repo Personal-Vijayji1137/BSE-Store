@@ -115,3 +115,39 @@
 .navitem > div {
     line-height: 2rem;
 }
+.navitem > div:nth-child(-n+5){
+    display: none;
+}
+@media screen and (min-width: 0px) and (max-width: 1100px) {
+    .menu > div:nth-child(5){
+        display: none;
+    }
+    .navitem > div:nth-child(5){
+        display: block;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 900px) {
+    .menu > div:nth-child(4){
+        display: none;
+    }
+    .navitem > div:nth-child(4){
+        display: block;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .menu > div:nth-child(3){
+        display: none;
+    }
+    .navitem > div:nth-child(3){
+        display: block;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .menu > div:nth-child(2){
+        display: none;
+    }
+    .navitem > div:nth-child(2){
+        display: block;
+    }
+}
+  
