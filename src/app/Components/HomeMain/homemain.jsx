@@ -63,7 +63,7 @@ export default function HomeMain(){
             </div>
            </div>
            
-           <div className={Styles.OurBlog}>
+           {/* <div className={Styles.OurBlog}>
                 <div>Our Blogs</div>
                 <Link href="/blogs" className={Styles.Btn}>All Articles</Link>
             </div>
@@ -92,11 +92,11 @@ export default function HomeMain(){
                     <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
                     <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
                 </div>
-           </div>
-           <JoinWithUS/>
+           </div> */}
+           {/* <JoinWithUS/>
            <HomeTV/>
            <HomeShop/>
-           <OurTeam/>
+           <OurTeam/> */}
         </>
     )
 }

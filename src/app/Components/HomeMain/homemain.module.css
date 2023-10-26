@@ -1,14 +1,14 @@
 .Main{
     display: flex;
     align-items: center;
-    margin: -25px 1%;
+    margin: -25px 0;
 }
 .DivOne{
-    width: 50vw;
+    width: 50%;
     margin-top: -50px;
 }
 .DivTwo{
-    width: 50vw;
+    width: 50%;
 }
 .BannerImage{
     width: 100%;
@@ -206,4 +206,117 @@
 .ReadMoreBtn:hover{
     color: #ff0000;
 }
+@media screen and (min-width: 0px) and (max-width: 1700px) {
 
+}
+@media screen and (min-width: 0px) and (max-width: 1500px) {
+
+}
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+
+}
+@media screen and (min-width: 0px) and (max-width: 1100px) {
+    .DivOne > h1{
+        font-size: 2.5rem;
+    }
+    .DivOne > h1 > span:nth-child(2){
+        font-size: 3rem;
+    }
+    .DivOne > p{
+        font-size: 0.9rem;
+    }
+    .Input{
+        width: 10rem;
+    }
+    .Btn {
+        padding: 0rem 2.5rem;
+    }
+    .AboutBSE > div > div:nth-child(2) > p{
+        font-size: 0.8rem;
+        margin: 1rem 2rem;
+    }
+    .AboutBSE{
+        margin: 10rem 1rem 5rem 1rem;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 900px) {
+    .Input{
+        width: 8rem;
+        height: 2rem;
+    }
+    .Btn {
+        padding: 0rem 1.5rem;
+    }
+    .DivOne > h1{
+        font-size: 2rem;
+    }
+    .DivOne > h1 > span:nth-child(2){
+        font-size: 2.5rem;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .DivOne > p{
+        font-size: 0.8rem;
+        margin: 1%;
+    }
+    .DivOne > h1 > span:nth-child(2){
+        font-size: 2.2rem;
+    }
+    .DivOne > h1{
+        margin: 1%;
+    }
+    .Input{
+        margin: 2% 1%;
+    }
+    .Btn{
+        height: 2rem;
+        margin: 2% 1%;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .DivOne > p{
+        display: none;
+    }
+    .LogInp{
+        display: none;
+    }
+    .Main{
+        margin: 0;
+    }
+    .AboutBSE > div{
+        margin-top: 5rem;
+    }
+    .DivOne > h1 > span:nth-child(1){
+        font-size: 2rem;
+        height: 3rem;
+    }
+    .DivOne > h1 > span:nth-child(2){
+        font-size: 1.5rem;
+    }
+    .AboutBSE{
+        display: inline;
+    }
+    .AboutBSE > div > div{
+        margin-top: 2rem;
+    }
+    .AboutBSE > div > div:nth-child(2) > p{
+        margin: 1rem 12rem;
+    }
+    .AboutBSE > div > div > div > img:nth-child(1){
+        position: relative;
+    }
+    .AboutBSE > div > div:nth-child(2){
+        margin-top: 1rem;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .AboutBSE > div > div:nth-child(2) > p{
+        margin: 1rem 8rem;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .AboutBSE > div > div:nth-child(2) > p{
+        margin: 1rem 4rem;
+    }
+
+}

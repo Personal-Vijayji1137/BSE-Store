@@ -19,6 +19,9 @@ export default function HomeNav(){
                         <div><Link href="/" className={styles.LinkText}>Shopping</Link></div>
                         <div><Link href="/" className={styles.LinkText}>Entertainment</Link></div>
                         <div><Link href="/" className={styles.LinkText}>Build my Site</Link></div>
+                        <div><Link href="/" className={styles.LinkText}>Playlist</Link></div>
+                        <div><Link href="/" className={styles.LinkText}>Music</Link></div>
+                        <div><Link href="/" className={styles.LinkText}>Reels</Link></div>
                         <div><Link href="#" className={styles.LinkText}>More&nbsp;<span className={styles.arrow}>&#x276F;</span></Link>
                         <ul className={styles.navitem}>
                             <div><Link href="/" className={styles.LinkText}>Courses</Link></div>

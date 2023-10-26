@@ -115,8 +115,32 @@
 .navitem > div {
     line-height: 2rem;
 }
-.navitem > div:nth-child(-n+5){
+.navitem > div:nth-child(-n+8){
     display: none;
+}
+@media screen and (min-width: 0px) and (max-width: 1700px) {
+    .menu > div:nth-child(8){
+        display: none;
+    }
+    .navitem > div:nth-child(8){
+        display: block;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 1500px) {
+    .menu > div:nth-child(7){
+        display: none;
+    }
+    .navitem > div:nth-child(7){
+        display: block;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+    .menu > div:nth-child(6){
+        display: none;
+    }
+    .navitem > div:nth-child(6){
+        display: block;
+    }
 }
 @media screen and (min-width: 0px) and (max-width: 1100px) {
     .menu > div:nth-child(5){
@@ -142,11 +166,22 @@
         display: block;
     }
 }
-@media screen and (min-width: 0px) and (max-width: 700px) {
+@media screen and (min-width: 0px) and (max-width: 600px) {
     .menu > div:nth-child(2){
         display: none;
     }
     .navitem > div:nth-child(2){
+        display: block;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .menu > div:nth-child(1){
+        display: none;
+    }
+    .menu > div:nth-child(9){
+        display: none;
+    }
+    .navitem > div:nth-child(1){
         display: block;
     }
 }
