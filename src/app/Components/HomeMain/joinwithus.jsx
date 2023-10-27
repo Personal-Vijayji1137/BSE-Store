@@ -8,7 +8,7 @@ export default function JoinWithUS(){
             <div>Join With US</div>
             <div>
                 <Link href="https://www.instagram.com/vijayji1137/" target='_blank'><Image src="https://i.postimg.cc/HxBRmjsZ/instagram.png" height={300} width={300} alt=""/></Link>
-                <Link href="https://www.youtube.com/@trademetrader" target='_blank'><Image src="https://i.postimg.cc/fRWJBrSx/youtube-1.png" height={300} width={300} alt=""/></Link>
+                <Link href="https://www.youtube.com/" target='_blank'><Image src="https://i.postimg.cc/fRWJBrSx/youtube-1.png" height={300} width={300} alt=""/></Link>
                 <Link href="https://www.linkedin.com/in/jitender1137/" target='_blank'><Image src="https://i.postimg.cc/VkTmnGqs/linkedin.png" height={300} width={300} alt=""/></Link>
                 <Link href="https://github.com/jitenderji1137" target='_blank'><Image src="https://i.postimg.cc/25bv7Kg0/github.png" height={300} width={300} alt=""/></Link>
                 <Link href="https://api.whatsapp.com/send?phone=918307056141" target='_blank'><Image src="https://i.postimg.cc/TwLn9YHL/whatsapp.png" height={300} width={300} alt=""/></Link>
