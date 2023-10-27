@@ -21,6 +21,7 @@ export default function HomeMain(){
                     <Image className={Styles.BannerImage} src="/HomeBanner.png" width={1000} height={1000} alt=""/>
                 </div>
            </main>
+           <p className={Styles.Paragra}>Explore a diverse online platform offering shopping, blogging, movies, earning, and free courses. Your all-in-one destination for endless possibilities and learning</p>
            <div className={Styles.BottomBanner}>
                <Image src="/BottomBanner.svg" width={1000} height={1000} alt=""/>
            </div>
@@ -61,9 +62,8 @@ export default function HomeMain(){
                     <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
                 </div>
             </div>
-           </div>
-           
-           {/* <div className={Styles.OurBlog}>
+           </div>        
+           <div className={Styles.OurBlog}>
                 <div>Our Blogs</div>
                 <Link href="/blogs" className={Styles.Btn}>All Articles</Link>
             </div>
@@ -92,11 +92,11 @@ export default function HomeMain(){
                     <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
                     <button className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
                 </div>
-           </div> */}
-           {/* <JoinWithUS/>
+           </div>
+           <JoinWithUS/>
            <HomeTV/>
            <HomeShop/>
-           <OurTeam/> */}
+           <OurTeam/>
         </>
     )
 }

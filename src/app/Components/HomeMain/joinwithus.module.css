@@ -42,3 +42,42 @@
 .JoinWithUS > div:nth-child(2) > a > img:hover{
     scale: 1.2;
 }
+@media screen and (min-width: 0px) and (max-width: 1700px) {
+}
+@media screen and (min-width: 0px) and (max-width: 1500px) {
+}
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+}
+@media screen and (min-width: 0px) and (max-width: 1100px) {
+    .JoinWithUS{
+        margin: 5rem 2rem 0 2rem;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 900px) {
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .JoinWithUS > div:nth-child(2){
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .JoinWithUS > div:nth-child(2) > a{
+        margin: 1rem;
+    }
+    .JoinWithUS > div:nth-child(1){
+        line-height: 5rem;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .JoinWithUS > div:nth-child(2){
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .JoinWithUS{
+        margin: 5rem 1rem 0 1rem;
+    }
+    .JoinWithUS > div:nth-child(2) > a{
+        padding: 1rem;
+    }
+}
