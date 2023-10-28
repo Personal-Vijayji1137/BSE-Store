@@ -18,17 +18,17 @@ export default function Footer(){
                     <div className={Styles.ForUlTag}>
                         <ul>
                             <Link href="/"><li>Home</li></Link>
-                            <Link href="/"><li>Courses</li></Link>
-                            <Link href="/"><li>Blogs</li></Link>
-                            <Link href="/"><li>Shopping</li></Link>
-                            <Link href="/"><li>Entertainment</li></Link>
-                            <Link href="/"><li>Build my Site</li></Link>
-                            <Link href="/"><li>Playlist</li></Link>
-                            <Link href="/"><li>Music</li></Link>
-                            <Link href="/"><li>Reels</li></Link>
-                            <Link href="/"><li>Earn</li></Link>
-                            <Link href="/"><li>Contact</li></Link>
-                            <Link href="/"><li>About</li></Link>
+                            <Link href="/courses"><li>Courses</li></Link>
+                            <Link href="/blogs"><li>Blogs</li></Link>
+                            <Link href="/shopping"><li>Shopping</li></Link>
+                            <Link href="/entertainment"><li>Entertainment</li></Link>
+                            <Link href="/build-my-site"><li>Build my Site</li></Link>
+                            <Link href="/playlist"><li>Playlist</li></Link>
+                            <Link href="/music"><li>Music</li></Link>
+                            <Link href="/reels"><li>Reels</li></Link>
+                            <Link href="/earn"><li>Earn</li></Link>
+                            <Link href="/contact"><li>Contact</li></Link>
+                            <Link href="/about"><li>About</li></Link>
                         </ul>
                         <ul>
                             <Link href="/"><li>Recent Uploaded...</li></Link>

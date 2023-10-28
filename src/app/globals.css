@@ -13,3 +13,14 @@ body::-webkit-scrollbar-thumb{
 	border-radius: 10px;
 	background-color: #000000;
 }
+
+.Tab{
+	display: none;
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+	.Tab{
+		display: block;
+		margin-top: 4rem;
+		position: relative;
+	}
+}
