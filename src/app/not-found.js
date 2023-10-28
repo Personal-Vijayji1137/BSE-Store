@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import "./Components/not-found.css"
-export default function NotFound() {
+const NotFound = ({})=>{
   return (
     <>
     <div className="Not">
@@ -17,3 +17,9 @@ export default function NotFound() {
     </>
   )
 }
+export const getStaticProps =  async()=>{
+    return{
+        props: {},
+    }
+}
+export default NotFound;
