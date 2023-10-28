@@ -47,8 +47,8 @@ export default function Footer(){
                     </div>
                 </div>
                 <div>
-                <div className={Styles.Para}>Explore a diverse online platform offering shopping, blogging, movies, earning, and free courses. Your all-in-one destination for endless possibilities and learning</div>
-                <div className={Styles.LogInp}>
+                    <div className={Styles.Para}>Explore a diverse online platform offering shopping, blogging, movies, earning, and free courses. Your all-in-one destination for endless possibilities and learning</div>
+                    <div className={Styles.LogInp}>
                     <input className={Styles.Input} required="" type="email" placeholder="Your Email ID"/>
                     <button className={Styles.Btn}>Get Start</button>
                 </div>

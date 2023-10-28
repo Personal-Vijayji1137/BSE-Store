@@ -389,10 +389,15 @@
     .OurBlogs > div > div:nth-child(2){
         line-height: 1.8rem;
     }
+    .Btn{
+        margin-top: 1.5rem;
+        -webkit-box-reflect: inherit;
+    }
 }
 @media screen and (min-width: 0px) and (max-width: 500px) {
     .AboutBSE > div > div:nth-child(2) > p{
         margin: 1rem 4rem;
+        font-size: 0.9rem;
     }
     .OurBlog{
         margin: 1rem;
