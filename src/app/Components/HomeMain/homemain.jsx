@@ -35,7 +35,7 @@ export default function HomeMain(){
                 </div>
                 <div>
                     <div>(B) Blogging</div>
-                    <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                    <p>Our blog is a treasure trove of insightful articles, tutorials, and tips on programming, development, and technology</p>
                 </div>
             </div>
             <div>
@@ -47,7 +47,7 @@ export default function HomeMain(){
                 </div>
                 <div>
                     <div>(S) Shopping</div>
-                    <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                    <p>Explore an exquisite collection of the latest fashion, electronics, home decor, and more.Shop smarter, shop with us.</p>
                 </div>
             </div>
             <div>
@@ -59,7 +59,7 @@ export default function HomeMain(){
                 </div>
                 <div>
                     <div>(E) Entertainment</div>
-                    <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                    <p>Dive into a world of limitless entertainment with our platform, and experience the joy of streaming without subscription fees</p>
                 </div>
             </div>
            </div>        
