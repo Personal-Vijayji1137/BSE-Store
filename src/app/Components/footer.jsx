@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Footer(){
     return(
         <>
-        <div className={Styles.Footer}>
+        <div id="Footer" className={Styles.Footer}>
             <div>
                 <div>
                     <div>
