@@ -1,0 +1,31 @@
+.InfiniteScroll{
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    mask-image: linear-gradient(to right,transparent 0, black 128px, black calc(100% - 128px),transparent 100%);
+    -webkit-mask-image: linear-gradient(to right,transparent 0, black 128px, black calc(100% - 128px),transparent 100%);
+}
+@keyframes primary {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-100%);
+    }
+}
+.InfiniteScroll > ul{
+    display: flex;
+    animation: primary 10s linear infinite;
+}
+.InfiniteScroll > ul > div{
+    color: white;
+    padding: 0.4rem 1.5rem;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.089);
+}
