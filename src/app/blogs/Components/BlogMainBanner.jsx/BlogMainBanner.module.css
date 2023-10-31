@@ -82,7 +82,6 @@
 .ReadMoreBtn{
     background-color: transparent;
     border: none;
-    cursor: pointer;
     color: #00ffbbcf;
     transition: 1s ease;
     font-size: 0.9rem;
