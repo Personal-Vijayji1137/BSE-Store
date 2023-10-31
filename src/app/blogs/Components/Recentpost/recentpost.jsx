@@ -1,4 +1,4 @@
-import Styles from "./RecentPost.module.css"
+import Styles from "./recentpost.module.css"
 export default function RecentPost(){
     return(
         <>
