@@ -4,6 +4,7 @@ import Footer from './Components/footer'
 import HomeNav from './Components/HomeNav/honenav'
 import Image from 'next/image'
 import Link from 'next/link'
+import NextTopLoader from 'nextjs-toploader';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+      <NextTopLoader color="#00ffbbcf" showSpinner={false} />
       <HomeNav/>
       {children}
       <Footer/>
