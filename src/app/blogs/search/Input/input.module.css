@@ -1,0 +1,122 @@
+.BlogSearch{
+    width: 100%;
+}
+.BlogSearch > input{
+    width: 80%;
+    border: 1px solid rgba(128, 128, 128, 0.849);
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: 'Concert One',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Results{
+    margin-top: 1rem;
+    font-weight: 100;
+    font-size: 1.5rem;
+    font-family: 'Concert One',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.SinglePost{
+    display: flex;
+    margin: 1rem 0;
+    text-decoration: none;
+}
+.SinglePost > div > img{
+    height: auto;
+    border-radius: 5px;
+}
+.SinglePost > div:nth-child(2){
+    margin:  0 0.5rem;
+}
+.SinglePost > div:nth-child(2) > div:nth-child(1){
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: white;
+    font-family: 'Concert One',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.SinglePost > div:nth-child(2) > div:nth-child(2){
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    margin-top: 0.3rem;
+    color: rgba(255, 255, 255, 0.548);
+}
+.ViewAll{
+    text-align: right;
+    text-decoration: none;
+}
+.ViewAll > a{
+    color: aqua;
+    text-decoration: none;
+    background-color: black;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+}
+.scrollingcontent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.scrollingcontent > a {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 0.4rem 1.5rem;
+    margin-left: 1rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.089);
+}
+.scrollingcontent > a > span:nth-child(1){
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    position: relative;
+    border-radius: 50%;
+}
+.scrollingcontent > a:nth-child(1) > span:nth-child(1){
+    background-color: aqua;
+}
+.scrollingcontent > a:nth-child(2) > span:nth-child(1){
+    background-color: rgb(255, 238, 0);
+}
+.scrollingcontent > a:nth-child(3) > span:nth-child(1){
+    background-color: rgb(255, 0, 128);
+}
+.scrollingcontent > a:nth-child(4) > span:nth-child(1){
+    background-color: rgb(89, 0, 255);
+}
+.scrollingcontent > a:nth-child(5) > span:nth-child(1){
+    background-color: rgb(255, 0, 0);
+}
+.scrollingcontent > a:nth-child(6) > span:nth-child(1){
+    background-color: rgb(102, 255, 0);
+}
+.scrollingcontent > a:nth-child(7) > span:nth-child(1){
+    background-color: rgb(0, 140, 255);
+}
+.scrollingcontent > a:nth-child(8) > span:nth-child(1){
+    background-color: rgb(131, 0, 39);
+}
+.scrollingcontent > a:nth-child(9) > span:nth-child(1){
+    background-color: rgb(255, 195, 116);
+}
+.scrollingcontent > a:nth-child(10) > span:nth-child(1){
+    background-color: rgb(255, 115, 115);
+}
+.Ads{
+    margin: 1rem 0;
+}
+.Ads > a{
+    width: 100%;
+}
+.Ads > a > img{
+    width: 100%;
+    border-radius: 5px;
+}
