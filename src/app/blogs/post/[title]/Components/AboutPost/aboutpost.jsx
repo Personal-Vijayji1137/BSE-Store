@@ -1,6 +1,7 @@
 import Styles from "./aboutpost.module.css"
 import Image from "next/image"
 import Link from "next/link"
+import Terminal from "./Terminal/terminal"
 export default function AboutPost(){
     return(
         <>
@@ -23,6 +24,10 @@ export default function AboutPost(){
         <p className={Styles.Paragraph}>She then expatiated very warmly upon the advantages I should reap from her plan talked in a high style of my future grandeur assured me how heartily I should despise almost every body and every thing I had hitherto seen predicted my marrying into some family of the first rank in the kingdom and finally said I should spend a few months in Paris where my education and manners might receive their last polish.</p>
         <div className={Styles.Link}>
             <Link href="/">Vist Site Now</Link>
+        </div>
+        <Terminal/>
+        <div className={Styles.Iframe}>
+            <iframe src="https://www.youtube.com/embed/RN-P2LQemV0"/>
         </div>
         </>
     )
