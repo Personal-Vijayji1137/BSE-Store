@@ -1,5 +1,5 @@
 import Styles from "./terminal.module.css"
-export default function Terminal(){
+export default function Terminal({Text}){
     return(
         <>
         <div className={Styles.Terminal}>
@@ -12,18 +12,7 @@ export default function Terminal(){
             <div>Copy &#x2750;</div>
         </div>
         <pre>
-            <code>{`import hljs from 'highlight.js';
-import 'highlight.js/styles/default.css';
-export default function Terminal(){
-    return(
-        <>
-        <pre>
-            <code>
-            </code>
-        </pre>
-        </>
-    )
-}`}
+            <code>{Text}
             </code>
         </pre>
         </div>

@@ -1,26 +1,26 @@
 import axios from "axios";
-const API_ENDPOINT = process.env.NEXT_PUBLIC_GRAPHQL_MOVIES_API_URL;
-const API_KEY = process.env.NEXT_PUBLIC_GRAPHQL_MOVIES_API_KEY;
-const graphqlQuery = `
-  {
-    listBSEMovies {
+const API_ENDPOINT = process.env.NEXT_PUBLIC_GRAPHQL_BOLGS_API_URI;
+const API_KEY = process.env.NEXT_PUBLIC_GRAPHQL_BLOGS_API_KEY;
+const graphqlQuery = `{
+    listBSEBlogs(filter: {ID: {eq: 1}}) {
         items {
-          FileID
-          Geans
+          Date
+          Description
           ID
           Image
-          MainCategory
-          Plateform
+          ParagrapHTML
+          ReadingTime
+          Tags
           Title
+          WrittenBy
         }
-      }
-  }
-`;
+    }
+}`;
 const headers = {
   'Content-Type': 'application/json',
   'x-api-key': API_KEY,
 };
-const GetMoviesList = axios({
+const GetBlogPostData = axios({
   method: 'post',
   url: API_ENDPOINT,
   data: JSON.stringify({
@@ -34,4 +34,4 @@ const GetMoviesList = axios({
   .catch((error) => {
     return error
   });
-export default GetMoviesList;
+export default GetBlogPostData;
