@@ -4,7 +4,7 @@ export default function AboutBlog(){
     return(
         <>
         <div className={Styles.AboutBlog}>
-            <BlogSearch/>
+            <BlogSearch />
         </div>
         </>
     )

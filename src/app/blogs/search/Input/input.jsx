@@ -1,23 +1,25 @@
 import Styles from "./input.module.css"
 import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script"
-export default function BlogSearch(){
+import GetFirstFivePostData from "@/app/Server/Bolgs/firstfivepost"
+export default async function BlogSearch(){
+    const FivePost = await GetFirstFivePostData();
+    const Data = FivePost.data.data.listBSEBlogs.items;
     return(
         <>
         <form className={Styles.BlogSearch}>
             <input type="text" placeholder="Blog to Search..." />
         </form>
         <div className={Styles.Results}>Top Results</div>
-        {Array.from({ length: 5 }, (_, index) => (
-        <Link href="/" key={index} className={Styles.SinglePost}>
-            <div><Image src="https://i.ytimg.com/vi/m5wVhQYriJE/maxresdefault.jpg" width={100} height={100} alt=""/></div>
-            <div>
-                <div>All the money in the world can&apos;t buy you back good health</div>
-                <div>May 2, 2022 || 3 min read</div>
-            </div>
-        </Link>
-        ))}
+        {Data.map((item)=>{
+            return <Link href={`/blogs/post/${item.ID}/${item.Title.split(" ").join("-")}`} key={item.ID} className={Styles.SinglePost}>
+                <div><Image src={item.Image} width={100} height={100} alt=""/></div>
+                <div>
+                    <div>{item.Title}</div>
+                    <div>{item.Date} || {item.ReadingTime}</div>
+                </div>
+            </Link>
+        })}
         <div className={Styles.ViewAll}>
             <Link href="/">View All &#x2794;</Link>
         </div>

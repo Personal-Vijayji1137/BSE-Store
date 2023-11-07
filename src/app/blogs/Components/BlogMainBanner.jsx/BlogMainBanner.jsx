@@ -5,7 +5,6 @@ export default function BlogMainBanner({Data}){
     const Tags = JSON.parse(Data.Tags);
     const TagOne = Object.keys(Tags[0])[0];
     const TagTwo = Object.keys(Tags[1])[0];
-    console.log(Data);
     return(
         <>
         <div className={Styles.BlogMainBanner}>
