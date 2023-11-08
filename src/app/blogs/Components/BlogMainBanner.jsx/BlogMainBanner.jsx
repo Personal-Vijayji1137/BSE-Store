@@ -1,17 +1,21 @@
+'use server'
+import { createClient } from "@supabase/supabase-js"
 import Styles from "./BlogMainBanner.module.css"
 import Image from "next/image"
 import Link from "next/link"
-export default function BlogMainBanner({Data}){
-    const Tags = JSON.parse(Data.Tags);
-    const TagOne = Object.keys(Tags[0])[0];
-    const TagTwo = Object.keys(Tags[1])[0];
+export default async function BlogMainBanner(){
+    const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
+    const GET = await supabase.from("BSE-Blogs").select('ID,Image,Title,Tags,Description,ReadingTime,Date').order('ID', { ascending: false }).range(0,0);
+    const Data = GET.data[0];
+    const TagOne = Object.keys(Data.Tags[0])[0];
+    const TagTwo = Object.keys(Data.Tags[1])[0];
     return(
         <>
         <div className={Styles.BlogMainBanner}>
             <div>
                 <div>
-                <div><Link href={Tags[0][TagOne]}><span></span><span>{TagOne}</span></Link></div>
-                <div><Link href={Tags[1][TagTwo]}><span></span><span>{TagTwo}</span></Link></div>
+                <div><Link href={Data.Tags[0][TagOne]}><span></span><span>{TagOne}</span></Link></div>
+                <div><Link href={Data.Tags[1][TagTwo]}><span></span><span>{TagTwo}</span></Link></div>
                 </div>
                 <div>{Data.Title}</div>
                 <div>{Data.Description}</div>

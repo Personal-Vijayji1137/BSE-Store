@@ -1,6 +1,7 @@
+'use server'
 import Styles from "./infinitescroll.module.css"
 import Link from "next/link"
-export default function InfiniteScroll(){
+export default async function InfiniteScroll(){
     return(
         <>
         <div className={Styles.Tags}>BSE-Tags</div>

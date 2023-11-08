@@ -1,14 +1,25 @@
+'use client'
+import { useState, useEffect } from "react"
+import { createClient } from "@supabase/supabase-js"
 import Styles from "./input.module.css"
 import Image from "next/image"
 import Link from "next/link"
-import GetFirstFivePostData from "@/app/Server/Bolgs/firstfivepost"
-export default async function BlogSearch(){
-    const FivePost = await GetFirstFivePostData();
-    const Data = FivePost.data.data.listBSEBlogs.items;
+export default function BlogSearch(){
+    const [query,queryvalue] = useState("");
+    const [Data,datavalue] = useState([]);
+    const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
+    async function FetchData(){
+        const res = await supabase.from("BSE-Blogs").select('ID,Image,Title,ReadingTime,Date').order('ID', { ascending: false }).ilike('Title', `%${query}%`).range(0,5);
+        console.log(res.data);
+        datavalue(res.data);
+    }
+    useEffect(()=>{
+        FetchData();
+    },[query])
     return(
         <>
         <form className={Styles.BlogSearch}>
-            <input type="text" placeholder="Blog to Search..." />
+            <input type="text" value={query} placeholder="Blog to Search..." onChange={(e)=>{queryvalue(e.target.value)}} />
         </form>
         <div className={Styles.Results}>Top Results</div>
         {Data.map((item)=>{

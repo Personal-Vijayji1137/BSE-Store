@@ -3,25 +3,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Terminal from './Terminal/terminal'
 export default function AboutPost({Data}){
-    const Paragraph = JSON.parse(Data.ParagrapHTML);
-    const Tags = JSON.parse(Data.Tags);
-    const TagOne = Object.keys(Tags[0])[0];
-    const TagTwo = Object.keys(Tags[1])[0];
+    const TagOne = Object.keys(Data.Tags[0])[0];
+    const TagTwo = Object.keys(Data.Tags[1])[0];
     return(
         <>
         <div className={Styles.AboutPost}>
             <Image src={Data.Image} width={1000} height={1000} alt=''/>
         </div>
         <div className={Styles.Tags}>
-                <div><Link href={Tags[0][TagOne]}><span></span><span>{TagOne}</span></Link></div>
-                <div><Link href={Tags[1][TagTwo]}><span></span><span>{TagTwo}</span></Link></div>
+                <div><Link href={Data.Tags[0][TagOne]}><span></span><span>{TagOne}</span></Link></div>
+                <div><Link href={Data.Tags[1][TagTwo]}><span></span><span>{TagTwo}</span></Link></div>
         </div>
         <div className={Styles.Heading}>
             <h1>{Data.Title}</h1>
         </div>
         <div className={Styles.Author}>{Data.WrittenBy}&nbsp;&nbsp;&nbsp;|| &nbsp;&nbsp;&nbsp;{Data.Date}&nbsp;&nbsp;&nbsp;|| &nbsp;&nbsp;&nbsp; {Data.ReadingTime}</div>
         <p className={Styles.Paragraph}>{Data.Description}</p>
-        {Paragraph.map((item,index)=>{
+        {(Data.ParagrapHTML).map((item,index)=>{
             const keys = Object.keys(item)[0];
             if(keys == "Paragraph"){
                 return <p className={Styles.Paragraph} key={index}>{item[keys]}</p>
