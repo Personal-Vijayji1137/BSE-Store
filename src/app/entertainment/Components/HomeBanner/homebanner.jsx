@@ -24,7 +24,7 @@ export default async function HomeBanner(){
                                 <span>{Banner.Duration}</span>
                                 <span> | </span>
                                 <span>{Banner.Geans} </span>
-                                <Link href={`/player/${Banner.Link}`}>Wacth</Link>
+                                <Link href={`/entertainment/player/${Banner.Link}/${Banner.Name.split(" ").join("-")}`}>Watch</Link>
                             </div>
                             <div className={Styles.Paragraph}>
                                 <div>{Banner.Paragraph}</div>
