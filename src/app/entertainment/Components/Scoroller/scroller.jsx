@@ -18,16 +18,16 @@ export default async function Scroller(){
     return(
         <>
         <div className={Styles.fnvbsjdbvdfjhbvuhef}>
-            <Render Data={[GET.data,"Recent Uploaded ...","/"]}/>
-            <Render Data={[WebSeries.data,"Web Series ...","/"]}/>
-            <Render Data={[Movies.data,"Movies ...","/"]}/>
-            <Render Data={[Songs.data,"Songs ...","/"]}/>
-            <Render Data={[Comedy.data,"Comedy ...","/"]}/>
-            <Render Data={[Action.data,"Action ...","/"]}/>
-            <Render Data={[Horror.data,"Horror ...","/"]}/>
-            <Render Data={[Drama.data,"Drama ...","/"]}/>
-            <Render Data={[Romantic.data,"Romantic ...","/"]}/>
-            <Render Data={[Adventure.data,"Adventure ...","/"]}/>
+            <Render Data={[GET.data,"Recent Uploaded ...","/entertainment/viewall/recent/1"]}/>
+            <Render Data={[WebSeries.data,"Web Series ...","/entertainment/viewall/MainCategory/WebSeries/1"]}/>
+            <Render Data={[Movies.data,"Movies ...","/entertainment/viewall/MainCategory/Movies/1"]}/>
+            <Render Data={[Songs.data,"Songs ...","/entertainment/viewall/MainCategory/Songs/1"]}/>
+            <Render Data={[Comedy.data,"Comedy ...","/entertainment/viewall/Geans/Comedy/1"]}/>
+            <Render Data={[Action.data,"Action ...","/entertainment/viewall/Geans/Action/1"]}/>
+            <Render Data={[Horror.data,"Horror ...","/entertainment/viewall/Geans/Horror/1"]}/>
+            <Render Data={[Drama.data,"Drama ...","/entertainment/viewall/Geans/Drama/1"]}/>
+            <Render Data={[Romantic.data,"Romantic ...","/entertainment/viewall/Geans/Romantic/1"]}/>
+            <Render Data={[Adventure.data,"Adventure ...","/entertainment/viewall/Geans/Adventure/1"]}/>
         </div>
         </>
     )
