@@ -1,4 +1,5 @@
 'use server'
+import Styles from "./render.module.css"
 import { createClient } from "@supabase/supabase-js";
 import Render from "./scrollerrender";
 export default async function Scroller(){
@@ -7,12 +8,27 @@ export default async function Scroller(){
     const WebSeries = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","WebSeries").range(0,15);
     const Movies = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","Movies").range(0,15);
     const Songs = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","Songs").range(0,15);
+    const Comedy = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Comedy").range(0,15);
+    const Action = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Action").range(0,15);
+    const Horror = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Horror").range(0,15);
+    const Drama = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Drama").range(0,15);
+    const Romantic = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Romantic").range(0,15);
+    const Adventure = await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Adventure").range(0,15);
+
     return(
         <>
-        <Render Data={[GET.data,"Recent Uploaded ...","/"]}/>
-        <Render Data={[WebSeries.data,"Web Series ...","/"]}/>
-        <Render Data={[Movies.data,"Movies ...","/"]}/>
-        <Render Data={[Songs.data,"Songs ...","/"]}/>
+        <div className={Styles.fnvbsjdbvdfjhbvuhef}>
+            <Render Data={[GET.data,"Recent Uploaded ...","/"]}/>
+            <Render Data={[WebSeries.data,"Web Series ...","/"]}/>
+            <Render Data={[Movies.data,"Movies ...","/"]}/>
+            <Render Data={[Songs.data,"Songs ...","/"]}/>
+            <Render Data={[Comedy.data,"Comedy ...","/"]}/>
+            <Render Data={[Action.data,"Action ...","/"]}/>
+            <Render Data={[Horror.data,"Horror ...","/"]}/>
+            <Render Data={[Drama.data,"Drama ...","/"]}/>
+            <Render Data={[Romantic.data,"Romantic ...","/"]}/>
+            <Render Data={[Adventure.data,"Adventure ...","/"]}/>
+        </div>
         </>
     )
 }
