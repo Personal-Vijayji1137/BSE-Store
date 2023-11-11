@@ -31,6 +31,9 @@ export default function Search({ params }){
                     </Link>
                 })}
             </div>
+            <div className={Styles.ViewAllBtn}>
+                <Link href={`/entertainment/search/viewall/1/${query==""?"recent":query.split(" ").join("-")}`}>View All</Link>
+            </div>
         </div>
         </>
     )

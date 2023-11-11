@@ -63,6 +63,17 @@
     margin-top: 0.3rem;
     color: rgba(255, 255, 255, 0.548);
 }
+.ViewAllBtn{
+    text-align: center;
+}
+.ViewAllBtn > a{
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+}
 @media screen and (min-width: 0px) and (max-width: 700px) {
     .Banners > div {
         width: 90%;
