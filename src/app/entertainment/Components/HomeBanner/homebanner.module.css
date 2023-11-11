@@ -1,3 +1,15 @@
+.searchbtn{
+    position: absolute;
+    right: 2rem;
+    top: 5rem;
+}
+.searchbtn > img{
+    width: 2rem;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.298);
+    padding: 1rem;
+    border-radius: 5px;
+}
 .TextDiv {
     background-size: 100% auto;
     background-repeat: no-repeat;
