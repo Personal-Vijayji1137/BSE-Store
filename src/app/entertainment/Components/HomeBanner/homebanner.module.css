@@ -141,6 +141,10 @@
         margin-top: 0;
         box-shadow: inset -130px 263px 72px -203px rgba(0,0,0);
     }
+    .searchbtn{
+        top: 4rem;
+        right: 0;
+    }
 }
 @media screen and (min-width: 0px) and (max-width: 500px) {
     .TextDiv > div {
