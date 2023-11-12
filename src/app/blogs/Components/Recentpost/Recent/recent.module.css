@@ -111,6 +111,10 @@
     .SinglePost > div:nth-child(1) > img{
         width: 100%;
     }
+    .SinglePost > div:nth-child(2) > div:nth-child(1){
+        font-family: system-ui, sans-serif;
+        font-weight: bold;
+    }
 }
 @media screen and (min-width: 0px) and (max-width: 450px) {
     .SinglePost{
