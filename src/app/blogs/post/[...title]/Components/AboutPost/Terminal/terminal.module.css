@@ -42,3 +42,13 @@
 .Terminal > div > div:nth-child(2):active{
     color: rgb(0, 255, 0);
 }
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .Terminal{
+        margin: 3rem 1%;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .Terminal > pre{
+        padding: 2rem 1%;
+    }
+}
