@@ -108,3 +108,11 @@
 .scrollingcontent > a:nth-child(20) > span:nth-child(1){
   background-color: rgb(255, 115, 115);
 }
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .scrollingcontainer {
+    width: 100%;
+  }
+  .Tags{
+    margin: 2rem auto 1rem;
+  }
+}
