@@ -90,3 +90,12 @@
         border-radius: 5px;
     }
 }
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .Banners > div {
+        width: 98%;
+        margin-top: 1rem;
+    }
+    .BlogSearch > input{
+        width: 99%;
+    }
+}
