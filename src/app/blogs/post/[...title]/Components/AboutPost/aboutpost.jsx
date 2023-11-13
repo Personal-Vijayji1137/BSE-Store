@@ -27,7 +27,7 @@ export default function AboutPost({Data}){
                 return <div className={Styles.SubHeading} key={index}><h2>{item[keys]}</h2></div>
             }else if(keys == "Button"){return <div className={Styles.Link} key={index}><Link href={item[keys][0].Link}>{item[keys][0].Text}</Link></div>
             }else if(keys == "Code"){return <Terminal Text={item[keys]} key={index}/>
-            }else if(keys == "Video"){return <div className={Styles.Iframe} key={index}><iframe src={item[keys][0].Link}/></div>
+            }else if(keys == "Video"){return <div className={Styles.Iframe} key={index}><iframe src={item[keys][0].Link} allowFullScreen/></div>
             }
         })}
         </>
