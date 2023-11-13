@@ -5,6 +5,7 @@ export async function GET(request) {
     var search = searchParams.get('query') || " ";
     var page = +searchParams.get('page') || 1;
     var limit = +searchParams.get('limit') || 20;
+    if(limit > 100){limit = 100}
     var Start = (page - 1)*limit;
     var End = (page*limit)-1;
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});

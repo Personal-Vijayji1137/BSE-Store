@@ -14,7 +14,7 @@ export default async function Page({ params }){
     return(
         <>
         <div>
-            <div className={Styles.Iframe}><iframe src={Iframe}/></div>
+            <div className={Styles.Iframe}><iframe src={Iframe} allowFullScreen/></div>
         </div>
         </>
     )
