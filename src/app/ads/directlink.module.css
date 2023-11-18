@@ -3,6 +3,8 @@
     z-index: -100;
     top: 1;
     background-color: transparent;
+    height: 10vh;
+    overflow: hidden;
 }
 .EmbedLink > embed{
     width: 90vw;
