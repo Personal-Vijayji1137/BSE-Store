@@ -3,6 +3,7 @@ import Styles from "./page.module.css"
 import Image from "next/image"
 import Link from "next/link"
 import { createClient } from "@supabase/supabase-js"
+import DirectLink from "@/app/ads/DirectLink"
 export default async function Page({ params }){
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
     const GET = await supabase.from('Free-Netflix-Darabase').select('*').eq('ID', `${params.video[0]}`);
@@ -48,6 +49,7 @@ export default async function Page({ params }){
                 </div>
             </div>
         </div>
+        <DirectLink/>
         </>
     )
 }

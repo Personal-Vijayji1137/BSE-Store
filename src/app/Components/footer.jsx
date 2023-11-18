@@ -1,9 +1,11 @@
 import Styles from "./footer.module.css"
 import Image from "next/image"
 import Link from "next/link"
+import AdsBanner from "../ads/banner"
 export default function Footer(){
     return(
         <>
+        <AdsBanner/>
         <div id="Footer" className={Styles.Footer}>
             <div>
                 <div>

@@ -4,6 +4,7 @@ import Styles from "./search.module.css"
 import SearchResult from "./queryresult"
 import Image from "next/image"
 import Link from "next/link"
+import DirectLink from "@/app/ads/DirectLink"
 export default function Search({ params }){
     const [query,queryvalue] = useState(params.search[0]=="recent"?"":params.search[0]);
     const [Data,datavalue] = useState([]);
@@ -35,6 +36,7 @@ export default function Search({ params }){
                 <Link href={`/entertainment/search/viewall/1/${query==""?"recent":query.split(" ").join("-")}`}>View All</Link>
             </div>
         </div>
+        <DirectLink/>
         </>
     )
 }

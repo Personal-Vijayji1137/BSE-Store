@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js"
 import Link from "next/link";
 import Image from "next/image";
 import Styles from "./viewall.module.css"
+import DirectLink from "@/app/ads/DirectLink";
 export default async function Page({ params }){
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
     var GET ;
@@ -64,6 +65,7 @@ export default async function Page({ params }){
             <button className="bg-red-700 p-2 rounded-md m-3" style={{ width: '60px' }} disabled>{page}</button>
             <Link className="bg-red-700 p-2 rounded-md m-3 text-center" style={{ width: '100px' }} href={next}>{Data.length < 50 ? 'Last Page' : 'Next'}</Link>
         </div>
+        <DirectLink/>
         </>
     )
 }
