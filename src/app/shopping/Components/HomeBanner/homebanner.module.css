@@ -1,0 +1,36 @@
+.HomeBanner{
+    display: flex;
+    margin-top: -4rem;
+}
+.HomeBanner > div{
+    width: 50%;
+}
+.HomeBanner > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+}
+.HomeBanner > div:nth-child(1) > div > div:nth-child(1){
+    color: rgba(255, 255, 255, 0.534);
+    font-size: 1rem;
+}
+.HomeBanner > div:nth-child(1) > div > div:nth-child(1) > span{
+    color: white;
+}
+.HomeBanner > div:nth-child(1) > div > div:nth-child(2){
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+.HomeBanner > div:nth-child(1) > div > a{
+    color: rgba(255, 255, 255, 0.39);
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: black;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+.HomeBanner > div:nth-child(2) > img{
+    width: 100%;
+    height: auto;
+}
