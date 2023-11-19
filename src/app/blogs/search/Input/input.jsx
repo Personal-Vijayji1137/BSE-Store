@@ -1,17 +1,15 @@
 'use client'
 import { useState, useEffect } from "react"
-import { createClient } from "@supabase/supabase-js"
+import SearchResult from "./searchresult"
 import Styles from "./input.module.css"
 import Image from "next/image"
 import Link from "next/link"
 export default function BlogSearch(){
     const [query,queryvalue] = useState("");
     const [Data,datavalue] = useState([]);
-    const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
-    async function FetchData(){
-        const res = await supabase.from("BSE-Blogs").select('ID,Image,Title,ReadingTime,Date').order('ID', { ascending: false }).ilike('Title', `%${query}%`).range(0,5);
-        console.log(res.data);
-        datavalue(res.data);
+    const FetchData = async()=>{
+        const data = await SearchResult(query);
+        datavalue(data);
     }
     useEffect(()=>{
         FetchData();
