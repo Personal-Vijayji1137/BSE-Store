@@ -10,7 +10,7 @@ export default async function HomeBanner(){
                 <div>
                     <div><span>🔥</span> In this season, find the best <span>🔥</span></div>
                     <div>Exclusive collection for everyone</div>
-                    <Link href="/">Explore now</Link>
+                    <Link href="/">Explore now &#x2794;</Link>
                 </div>
             </div>
             <div><Image src="/ShoppingBanner.png" width={1000} height={1000}/></div>

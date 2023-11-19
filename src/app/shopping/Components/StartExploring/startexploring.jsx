@@ -17,13 +17,61 @@ export default async function StartExploring(){
                     <Link href="/"><Image src="/JewelryIcon.svg" width={40} height={40}/>Jewelry</Link>
                 </div>
             </div>
-            <div>
-                <Link href="/"></Link>
-                <Link href="/"></Link>
-                <Link href="/"></Link>
-                <Link href="/"></Link>
-                <Link href="/"></Link>
-                <Link href="/"></Link>
+            <div className={Styles.Category}>
+                <Link href="/" style={{ backgroundImage: `url(/CoatBG.svg)`}}>
+                    <div>
+                        <Image src="/BackpackIcon.png" width={100} height={100}/>
+                        <div>155 Products</div>
+                    </div>
+                    <div>Manufacturar</div>
+                    <div>Backpack</div>
+                    <div>See Collection &#x2794;</div>
+                </Link>
+                <Link href="/" style={{ backgroundImage: `url(/JerseyBG.svg)`}}>
+                    <div>
+                        <Image src="/ShoesIcon.png" width={100} height={100}/>
+                        <div>22 Products</div>
+                    </div>
+                    <div>Manufacturar</div>
+                    <div>Shoes</div>
+                    <div>See Collection &#x2794;</div>
+                </Link>
+                <Link href="/" style={{ backgroundImage: `url(/ShortsBG.svg)`}}>
+                    <div>
+                        <Image src="/BlanketIcon.png" width={100} height={100}/>
+                        <div>144 Products</div>
+                    </div>
+                    <div>Manufacturar</div>
+                    <div>Blanket</div>
+                    <div>See Collection &#x2794;</div>
+                </Link>
+                <Link href="/" style={{ backgroundImage: `url(/ShortsBG.svg)`}}>
+                    <div>
+                        <Image src="/ShortsIcon.png" width={100} height={100}/>
+                        <div>343 Products</div>
+                    </div>
+                    <div>Manufacturar</div>
+                    <div>Shorts</div>
+                    <div>See Collection &#x2794;</div>
+                </Link>
+                <Link href="/" style={{ backgroundImage: `url(/BlanketBG.svg)`}}>
+                    <div>
+                        <Image src="/JerseyIcon.png" width={100} height={100}/>
+                        <div>243 Products</div>
+                    </div>
+                    <div>Manufacturar</div>
+                    <div>Jersey</div>
+                    <div>See Collection &#x2794;</div>
+                </Link>
+                <Link href="/" style={{ backgroundImage: `url(/CoatBG.svg)`}}>
+                    <div>
+                        <Image src="/CoatIcon.png" width={100} height={100}/>
+                        <div>198 Products</div>
+                    </div>
+                    <div>Manufacturar</div>
+                    <div>Coat</div>
+                    <div>See Collection &#x2794;</div>
+                </Link>
             </div>
         </div>
         </>

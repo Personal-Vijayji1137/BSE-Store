@@ -11,7 +11,7 @@ export default async function KidsBanner(){
                 <div>
                     <div>Fashion is a form of self-expression and autonomy at a particular period and place.</div>
                     <div>Special offer in kids products</div>
-                    <Link href="/">Discover more</Link>
+                    <Link href="/">Discover more &#x2794;</Link>
                 </div>
             </div>
         </div>
