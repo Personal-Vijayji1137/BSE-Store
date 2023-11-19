@@ -1,10 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-      serverActions: true,
-    },
     images: {
-      domains: ['i.ytimg.com','i.postimg.cc','i.ibb.co'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'i.ytimg.com',
+          port: '',
+          pathname: '**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'i.postimg.cc',
+          port: '',
+          pathname: '**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'i.ibb.co',
+          port: '',
+          pathname: '**',
+        },
+      ],
     },
 }
 
