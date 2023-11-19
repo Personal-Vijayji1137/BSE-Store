@@ -5,24 +5,22 @@
 .HomeBanner > div{
     width: 50%;
 }
-.HomeBanner > div:nth-child(1){
+.HomeBanner > div:nth-child(2){
     display: flex;
     align-items: center;
     margin-left: 3rem;
 }
-.HomeBanner > div:nth-child(1) > div > div:nth-child(1){
+.HomeBanner > div:nth-child(2) > div > div:nth-child(1){
     color: rgba(255, 255, 255, 0.534);
     font-size: 1rem;
+    max-width: 70%;
 }
-.HomeBanner > div:nth-child(1) > div > div:nth-child(1) > span{
-    color: white;
-}
-.HomeBanner > div:nth-child(1) > div > div:nth-child(2){
+.HomeBanner > div:nth-child(2) > div > div:nth-child(2){
     color: rgb(255, 255, 255);
     font-size: 4rem;
     margin: 2rem 0;
 }
-.HomeBanner > div:nth-child(1) > div > a{
+.HomeBanner > div:nth-child(2) > div > a{
     color: rgba(255, 255, 255, 0.39);
     font-size: 1rem;
     text-decoration: none;
@@ -30,8 +28,8 @@
     padding: 1rem 2rem;
     border-radius: 10px;
 }
-.HomeBanner > div:nth-child(2) > img{
+.HomeBanner > div:nth-child(1) > img{
     width: 100%;
     height: auto;
-    filter: drop-shadow(5px -8px 100px rgba(200, 255, 0, 0.411));
+    filter: drop-shadow(5px -8px 100px rgb(0, 255, 55));
 }
