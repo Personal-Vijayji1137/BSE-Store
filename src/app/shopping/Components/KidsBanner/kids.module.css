@@ -1,6 +1,6 @@
 .HomeBanner{
     display: flex;
-    margin-top: -4rem;
+    margin-top: 4rem;
 }
 .HomeBanner > div{
     width: 50%;

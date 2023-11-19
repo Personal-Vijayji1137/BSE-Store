@@ -1,7 +1,8 @@
+'use server'
 import Image from "next/image"
 import Link from "next/link"
 import Styles from "./kids.module.css"
-export default function KidsBanner(){
+export default async function KidsBanner(){
     return(
         <>
         <div style={{ backgroundImage: `url(/ShoppingHomeBG.svg)`}} className={Styles.HomeBanner}>
