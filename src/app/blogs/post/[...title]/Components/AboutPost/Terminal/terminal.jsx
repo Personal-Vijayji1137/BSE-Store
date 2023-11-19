@@ -1,4 +1,6 @@
+'use client'
 import Styles from "./terminal.module.css"
+import copy from "copy-to-clipboard"
 export default function Terminal({Text}){
     return(
         <>
@@ -9,7 +11,7 @@ export default function Terminal({Text}){
                 <div></div>
                 <div></div>
             </div>
-            <div>Copy &#x2750;</div>
+            <div onClick={()=>{copy(Text)}}>Copy &#x2750;</div>
         </div>
         <pre>
             <code>{Text}
