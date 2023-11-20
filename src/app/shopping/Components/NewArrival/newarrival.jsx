@@ -6,7 +6,7 @@ export default async function NewArrival(){
     const GET = await supabase.from('BSE-Shopping').select('ID,Title,Image,Link,Price').order('ID', { ascending: false }).range(0,20);
     return(
         <>
-        <Render Data={GET}/>
+        <Render Data={GET} Text="New Arrivals ..." link="/new"/>
         </>
     )
 }

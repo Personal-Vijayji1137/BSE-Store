@@ -1,6 +1,7 @@
 .MainSteps{
     text-align: center;
     background-repeat: no-repeat;
+    margin-bottom: 6rem;
 }
 .MainSteps > div:nth-child(1){
     color: white;
