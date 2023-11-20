@@ -26,7 +26,7 @@
 .Conainer {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow: scroll;
     scroll-behavior: smooth;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -39,9 +39,8 @@
     position: relative;
     margin: 1rem;
     border-radius: 0.25rem;
-    width: 15vw;
+    width: min-content;
     border: 1px solid rgba(255, 255, 255, 0.205);
-    overflow: hidden;
     background-color: #161819;
     box-shadow: rgba(0, 238, 255, 0.473) 0px 4px 8px -2px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
@@ -74,7 +73,7 @@
 }
 .Images {
     border-radius: 0.25rem;
-    width: 100%;
+    width: 15vw;
     height: auto;
     cursor: pointer;
     transition-duration: 0.3s;
