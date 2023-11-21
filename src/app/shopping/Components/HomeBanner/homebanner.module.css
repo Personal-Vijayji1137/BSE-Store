@@ -1,6 +1,6 @@
 .HomeBanner{
     display: flex;
-    margin-top: -4rem;
+    margin-top: -4vw;
 }
 .HomeBanner > div{
     width: 50%;
@@ -8,30 +8,41 @@
 .HomeBanner > div:nth-child(1){
     display: flex;
     align-items: center;
-    margin-left: 3rem;
+    margin-left: 3vw;
 }
 .HomeBanner > div:nth-child(1) > div > div:nth-child(1){
     color: rgba(255, 255, 255, 0.534);
-    font-size: 1rem;
+    font-size: 1vw;
 }
 .HomeBanner > div:nth-child(1) > div > div:nth-child(1) > span{
     color: white;
 }
 .HomeBanner > div:nth-child(1) > div > div:nth-child(2){
     color: rgb(255, 255, 255);
-    font-size: 4rem;
-    margin: 2rem 0;
+    font-size: 4vw;
+    margin: 2vw 0;
 }
 .HomeBanner > div:nth-child(1) > div > a{
     color: rgba(255, 255, 255, 0.39);
-    font-size: 1rem;
+    font-size: 1vw;
     text-decoration: none;
     background-color: black;
-    padding: 1rem 2rem;
+    padding: 1vw 2vw;
     border-radius: 10px;
 }
 .HomeBanner > div:nth-child(2) > img{
     width: 100%;
     height: auto;
     filter: drop-shadow(5px -8px 100px rgba(200, 255, 0, 0.411));
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+    .HomeBanner > div:nth-child(1) > div > div:nth-child(1){
+        font-size: 2vw;
+    }
+    .HomeBanner > div:nth-child(1) > div > div:nth-child(2){
+        font-size: 5vw;
+    }
+    .HomeBanner > div:nth-child(1) > div > a{
+        font-size: 2vw;
+    }
 }
