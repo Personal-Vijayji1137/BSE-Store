@@ -7,7 +7,7 @@ import Jewellery from "./Components/Jewellery/jewellery";
 export const metadata = {
     title: 'BSE - Shopping ...',
     description: '...',
-  }
+}
 export default function Shopping(){
     return(
         <>
