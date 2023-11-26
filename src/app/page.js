@@ -1,6 +1,6 @@
 import HomeMain from './Components/HomeMain/homemain'
 export const metadata = {
-  metadataBase: new URL('https://bsestore.vercel.app/'),
+  // metadataBase: new URL('https://bsestore.vercel.app/'),
   title: 'BSE - Store',
   description: 'Explore a diverse online platform offering shopping, blogging, movies, earning, and free courses. Your all-in-one destination for endless possibilities and learning',
   openGraph: {
