@@ -1,6 +1,6 @@
 'use server'
 import { createClient } from "@supabase/supabase-js"
-export async function GET(request,{ params }) {
+export async function POST(request,{ params }) {
     const ID = params.id;
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
     const res = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('*').eq('ID',ID);
@@ -33,7 +33,7 @@ export async function GET(request,{ params }) {
     }
     return Response.json({ "status":200,"message":res.data.length==0?`No result found on for this ID = ${ID}`:"success","ID":`${ID}`,"data":{...response,"IframeURL":iframeUrl,"DownloadURL":download}, })
 }
-export async function POST() {
+export async function GET() {
     const data = {"message":"GET or any other Method is not alowed, Please use POST Method only ..."}
     return Response.json(data);
 }export async function PATCH() {
