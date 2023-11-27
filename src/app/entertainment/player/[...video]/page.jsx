@@ -6,18 +6,26 @@ import { createClient } from "@supabase/supabase-js"
 import DirectLink from "@/app/ads/DirectLink"
 export default async function Page({ params }){
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
-    const GET = await supabase.from('Free-Netflix-Darabase').select('*').eq('ID', `${params.video[0]}`);
+    const GET = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('*').eq('ID', `${params.video[0]}`);
     const Date = GET.data[0];
     var Iframe ;
-    const resentdata = await supabase.from("Free-Netflix-Darabase").select('ID,Title,Image').order('ID', { ascending: false }).range(0,15);
-    const res = await supabase.from("Free-Netflix-Darabase").select('ID,Title,Image').order('ID', { ascending: false }).eq('MainCategory' , `${Date.MainCategory}`).range(0,30);
+    const resentdata = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).range(0,15);
+    const res = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq('MainCategory' , `${Date.MainCategory}`).range(0,30);
     const resentada = resentdata.data;
     const datada = res.data;
     if(Date.Plateform == "filemoon"){
         Iframe = `https://filemoon.sx/e/${Date.FileID}?logo=https://i.postimg.cc/N0BLyhkx/logo.webp&poster=${Date.Image}`;
     }else if(Date.Plateform == "Youtube"){
         Iframe = `https://www.youtube.com/embed/${Date.FileID}`;
-    }
+    }else if (Date.Plateform === 'Vidsrc') {
+        const embedType = Date.MainCategory === 'TV' ? 'tv' : 'movie';
+        Iframe = `https://vidsrc.to/embed/${embedType}/${fileid}`;
+      } else if (Date.Plateform === 'vidsrc') {
+        const embedType = Date.MainCategory === 'TV' ? 'tv' : 'movie';
+        Iframe = `https://vidsrc.me//embed//${embedType}?imdb=${fileid}`;
+      } else if (Date.Plateform === 'streamtape') {
+        Iframe = `https://antiadtape.com/e/${fileid}?thumb=${Date.Image}`;
+      }
     return(
         <>
         <div className={Styles.Maindiv}>

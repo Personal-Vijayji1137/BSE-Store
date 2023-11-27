@@ -22,7 +22,7 @@ export default async function Page({ params }){
         }else{
             back = `/entertainment/viewall/recent/${page-1}`
         }
-        GET = (await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).range(Start,End));
+        GET = (await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).range(Start,End));
         if(GET.data.length < 50){
             next = `/entertainment/viewall/recent/${page}`
         }else{
@@ -39,7 +39,7 @@ export default async function Page({ params }){
         }else{
             back = `/entertainment/viewall/${params.view[0]}/${params.view[1]}/${page-1}`
         }
-        GET = (await supabase.from('Free-Netflix-Darabase').select('ID,Title,Image').order('ID', { ascending: false }).eq(`${params.view[0]}`,`${params.view[1]}`).range(Start,End));
+        GET = (await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq(`${params.view[0]}`,`${params.view[1]}`).range(Start,End));
         if(GET.data.length < 50){
             next = `/entertainment/viewall/${params.view[0]}/${params.view[1]}/${page}`
         }else{
