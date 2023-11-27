@@ -37,6 +37,7 @@ export default function HomeNav(){
                             <div><Link href="https://github.com/jitenderji1137" className={styles.LinkText}>Github</Link></div>
                             <div><Link href="https://www.linkedin.com/in/jitender1137/" className={styles.LinkText}>Linkedin</Link></div>
                             <div><Link href="https://www.instagram.com/vijayji1137/" className={styles.LinkText}>Instagram</Link></div>
+                            <div><Link href="/api" className={styles.LinkText}>API</Link></div>
                             <div><Link href="/contact" className={styles.LinkText}>Contact</Link></div>
                             <div><Link href="/about" className={styles.LinkText}>About</Link></div>
                         </ul>
