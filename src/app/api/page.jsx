@@ -14,7 +14,7 @@ export default function API(){
             <div onClick={()=>{pagevalue("Playlist")}} style={{color:page === "Playlist"?"#00ffc6":"white"}}>Playlist</div>
         </div>
         <div className={Styles.Welcome}>Welcome to BSE-API</div>
-        <div className={Styles.BaseURL}>BaseURL = <span>{document.URL}/v1/</span></div>
+        <div className={Styles.BaseURL}>BaseURL = <span>{process.env.NEXT_PUBLIC_API_BASE_URL}</span></div>
         {page == "Blogs"?<>
         <div>This is blogs api page</div>
         </>:<></>}
