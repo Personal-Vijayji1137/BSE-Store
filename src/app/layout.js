@@ -4,6 +4,7 @@ import Footer from './Components/footer'
 import HomeNav from './Components/HomeNav/honenav'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   metadataBase: new URL('https://bsestore.vercel.app/'),
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
           </Link>
         </div>
       </body>
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9040616366543275" crossorigin="anonymous"></Script>
     </html>
   )
 }
