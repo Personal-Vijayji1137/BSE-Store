@@ -4,8 +4,29 @@ import Image from "next/image"
 import Link from "next/link"
 import { createClient } from "@supabase/supabase-js"
 import DirectLink from "@/app/ads/DirectLink"
+const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
+export async function generateMetadata({ params }) {
+    const GET = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('Title,Image').eq('ID', `${params.video[0]}`);
+    return {
+        title: `${GET.data[0].Title} ( BSE-Store ) || Watch in HD or Download`,
+        description: `Watch ${GET.data[0].Title} on BSE-Store in HD or Download it, Here you can Unlock the ultimate entertainment experience with BSE - Entertainment, where every movie and web series is at your fingertips, completely free of charge. No more waiting for the latest releases, no more financial barriers, BSE - Entertainment is your passport to endless entertainment, available anytime, anywhere.`,
+        openGraph: {
+            title: `${GET.data[0].Title} ( BSE-Store ) || Watch in HD or Download`,
+            description: `Watch ${GET.data[0].Title} on BSE-Store in HD or Download it, Here you can Unlock the ultimate entertainment experience with BSE - Entertainment, where every movie and web series is at your fingertips, completely free of charge. No more waiting for the latest releases, no more financial barriers, BSE - Entertainment is your passport to endless entertainment, available anytime, anywhere.`,
+            images: GET.data[0].Image,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${GET.data[0].Title} ( BSE-Store ) || Watch in HD or Download`,
+            description: `Watch ${GET.data[0].Title} on BSE-Store in HD or Download it, Here you can Unlock the ultimate entertainment experience with BSE - Entertainment, where every movie and web series is at your fingertips, completely free of charge. No more waiting for the latest releases, no more financial barriers, BSE - Entertainment is your passport to endless entertainment, available anytime, anywhere.`,
+            siteId: '1467726470533754880',
+            creator: '@nextjs',
+            creatorId: '1467726470533754880',
+            images: [`${GET.data[0].Image}`],
+        }
+    }
+}
 export default async function Page({ params }){
-    const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
     const GET = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('*').eq('ID', `${params.video[0]}`);
     const Date = GET.data[0];
     var Iframe ;
