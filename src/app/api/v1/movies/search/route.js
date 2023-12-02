@@ -9,7 +9,7 @@ export async function POST(request) {
     var Start = (page - 1)*limit;
     var End = (page*limit)-1;
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
-    const res = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).ilike('Title', `%${search}%`).range(Start,End);
+    const res = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('*').order('ID', { ascending: false }).ilike('Title', `%${search}%`).range(Start,End);
     const data = res.data;
     return Response.json({ "status":200,"message":data.length==0?"No result found on this page":"success","query":`${search}`,"page": page,"limit":limit,data, })
 }

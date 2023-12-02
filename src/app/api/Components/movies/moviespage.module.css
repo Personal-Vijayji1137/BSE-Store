@@ -37,3 +37,47 @@
     color: aqua;
     scale: 1.2;
 }
+.ResponseImage{
+    width: 100%;
+    height: auto;
+    border-radius: 1vw;
+}
+.Response{
+    color: white;
+    padding: 1vw;
+}
+.HR{
+    margin-top: 2vw;
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.445);
+}
+.TableHeading{
+    margin: 2vw 1vw 0 1vw;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-bottom: 0.6vw;
+    font-size: 1vw;
+    border-bottom: 0.11vw solid rgba(128, 128, 128, 0.644);
+}
+.TableHeading > div{
+    display: flex;
+}
+.TableHeading > div > div{
+    width: 15vw;
+}
+.TableHeadingTable{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 0 1vw;
+    padding: 1.5vw 0;
+    font-size: 0.9vw;
+    border-bottom: 0.11vw solid rgba(128, 128, 128, 0.39);
+}
+.TableHeadingTable > div{
+    display: flex;
+}
+.TableHeadingTable > div > div{
+    width: 15vw;
+    color: rgba(255, 255, 255, 0.534);
+}
