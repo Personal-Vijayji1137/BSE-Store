@@ -6,6 +6,7 @@ import Link from "next/link"
 export default async function HomeBanner(){
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
     const GET = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_BANNER_NAME).select('*').eq('id', 1);
+    console.log(GET)
     const Banner = GET.data[0];
     return(
         <>
