@@ -31,4 +31,9 @@
     cursor: pointer;
     position: absolute;
     right: 2.5vw;
+    transition: all ease 0.1s;
+}
+.Codetocopy:active{
+    color: aqua;
+    scale: 1.2;
 }
