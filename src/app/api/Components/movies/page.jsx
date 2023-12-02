@@ -20,6 +20,11 @@ export default function MoviesAPI(){
         <div className={Styles.Response}>Response</div>
         <Image src="/API/SearchResultsImage.svg" className={Styles.ResponseImage} width={10000} height={10000}/>
         <div className={Styles.HR}></div>
+        <div className={Styles.MoviesAPITitle}>Get By ID</div>
+        <div className={Styles.MoviesAPIMethod}><span>POST</span><div className={Styles.MoviesAPIMethodDiv}>{process.env.NEXT_PUBLIC_API_BASE_URL}</div><div className={Styles.Path}>movies/10001206</div><code className={Styles.Codetocopy} onClick={()=>{copy(`${process.env.NEXT_PUBLIC_API_BASE_URL}movies/10001206`)}}>Copy</code></div>
+        <div className={Styles.Response}>Response</div>
+        <Image src="/API/SearchByID.svg" className={Styles.ResponseImage} width={10000} height={10000}/>
+        <div className={Styles.HR}></div>
         </>
     )
 }
