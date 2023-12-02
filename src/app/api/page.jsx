@@ -1,4 +1,3 @@
-'use server'
 import API from "./Components/HomePage";
 export const metadata = {
     title: 'API Docs of BSE - Store || Free and Unlimited Requests',
@@ -18,7 +17,7 @@ export const metadata = {
       images: ['https://i.postimg.cc/SK6HC0YG/Screenshot-138.png'],
     }
   }
-export default async function APIHome(){
+export default function APIHome(){
     return(
         <>
         <API/>
