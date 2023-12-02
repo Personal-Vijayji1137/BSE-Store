@@ -18,6 +18,14 @@ body::-webkit-scrollbar-thumb{
 .Tab{
 	display: none;
 }
+.Loading{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80vh;
+	color: white;
+}
 @media screen and (min-width: 0px) and (max-width: 600px) {
 	.Tab{
 		display: flex;

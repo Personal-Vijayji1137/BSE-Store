@@ -1,6 +1,8 @@
 import DirectLink from "../ads/DirectLink"
+import Loading from "../loading"
 import HomeBanner from "./Components/HomeBanner/homebanner"
 import Scroller from "./Components/Scoroller/scroller"
+import { Suspense } from "react"
 export const metadata = {
   title: 'BSE - Entertainment || Watch All New Movies and Shows For Free or Download in HD',
   description: 'Unlock the ultimate entertainment experience with BSE - Entertainment, where every movie and web series is at your fingertips, completely free of charge. No more waiting for the latest releases, no more financial barriers, BSE - Entertainment is your passport to endless entertainment, available anytime, anywhere.',
@@ -22,11 +24,13 @@ export const metadata = {
 export default function Entertainment(){
   return (
     <>
-    <div>
-        <HomeBanner/>
-        <Scroller/>
-    </div>
-    <DirectLink/>
+    <Suspense fallback={<Loading/>}>
+      <div>
+          <HomeBanner/>
+          <Scroller/>
+      </div>
+      <DirectLink/>
+    </Suspense>
     </>
   )
 }
