@@ -10,7 +10,7 @@ export default function API(){
       const handleScroll = () => {
         const stickyHeader = stickyHeaderRef.current;
         const stickyHeaderTop = stickyHeader.offsetTop;
-        if (window.pageYOffset > stickyHeaderTop) {
+        if (window.pageYOffset > stickyHeaderTop+50) {
           setIsSticky(true);
         } else {
           setIsSticky(false);
