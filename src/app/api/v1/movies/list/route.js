@@ -4,8 +4,8 @@ export async function POST(request) {
     const { searchParams } = new URL(request.url)
     var page = +searchParams.get('page') || 1;
     var limit = +searchParams.get('limit') || 20;
-    var MainCategory = searchParams.get('MainCategory');
-    var Geans = searchParams.get('Geans');
+    var MainCategory = searchParams.get('category');
+    var Geans = searchParams.get('genre');
     if(limit > 100){limit = 100}
     var Start = (page - 1)*limit;
     var End = (page*limit)-1;

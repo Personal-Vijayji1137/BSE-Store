@@ -81,3 +81,14 @@
     width: 15vw;
     color: rgba(255, 255, 255, 0.534);
 }
+.TypeOfCategory{
+    display: flex;
+    color: rgba(255, 255, 255, 0.445);
+    padding: 1vw;
+    font-size: 1vw;
+}
+.TypeOfCategory > span{
+    padding: 0 1vw;
+    font-size: 1vw;
+    color: white;
+}

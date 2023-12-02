@@ -25,6 +25,19 @@ export default function MoviesAPI(){
         <div className={Styles.Response}>Response</div>
         <Image src="/API/SearchByID.svg" className={Styles.ResponseImage} width={10000} height={10000}/>
         <div className={Styles.HR}></div>
+        <div className={Styles.MoviesAPITitle}>Get List</div>
+        <div className={Styles.MoviesAPIMethod}><span>POST</span><div className={Styles.MoviesAPIMethodDiv}>{process.env.NEXT_PUBLIC_API_BASE_URL}</div><div className={Styles.Path}>movies/list</div><code className={Styles.Codetocopy} onClick={()=>{copy(`${process.env.NEXT_PUBLIC_API_BASE_URL}movies/list`)}}>Copy</code></div>
+        <div className={Styles.Response}>Parameters</div>
+        <div className={Styles.TableHeading}><div><div>Name</div><div>Description</div></div><div><div>Required</div><div>Type</div></div></div>
+        <div className={Styles.TableHeadingTable}><div><div>page</div><div>Page Number || Ex :- 3</div></div><div><div>NO</div><div>Number</div></div></div>
+        <div className={Styles.TableHeadingTable}><div><div>limit</div><div>No.of Results Per Page || Ex :- 30</div></div><div><div>NO</div><div>Number</div></div></div>
+        <div className={Styles.TableHeadingTable}><div><div>category</div><div>Give Category  || Ex :- Movies</div></div><div><div>NO</div><div>String</div></div></div>
+        <div className={Styles.TableHeadingTable}><div><div>genre</div><div>Give Genre || Ex :- Action</div></div><div><div>NO</div><div>String</div></div></div>
+        <div className={Styles.TypeOfCategory}><div>Different Type of Category</div> :- <span>Movies</span>||<span>WebSeries</span>||<span>Songs</span>||<span>TV</span></div>
+        <div className={Styles.TypeOfCategory}><div>Different Type of Genre</div> :- <span>Romantic</span>||<span>Action</span>||<span>Adventure</span>||<span>Comedy</span>||<span>Crime</span>||<span>Drama</span>||<span>Horror</span>||<span>Thriller</span></div>
+        <div className={Styles.Response}>Response</div>
+        <Image src="/API/ListOfData.svg" className={Styles.ResponseImage} width={10000} height={10000}/>
+        <div className={Styles.HR}></div>
         </>
     )
 }
