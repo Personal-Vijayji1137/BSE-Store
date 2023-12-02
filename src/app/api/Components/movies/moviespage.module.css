@@ -26,3 +26,9 @@
 .Path{
     color: white;
 }
+.Codetocopy{
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 2.5vw;
+}
