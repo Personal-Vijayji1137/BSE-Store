@@ -17,6 +17,9 @@ export default function MoviesAPI(){
         <div className={Styles.TableHeadingTable}><div><div>query</div><div>Search By Title || Ex :- Gader</div></div><div><div>YES</div><div>String</div></div></div>
         <div className={Styles.TableHeadingTable}><div><div>page</div><div>Page Number || Ex :- 3</div></div><div><div>NO</div><div>Number</div></div></div>
         <div className={Styles.TableHeadingTable}><div><div>limit</div><div>No.of Results Per Page || Ex :- 30</div></div><div><div>NO</div><div>Number</div></div></div>
+        <div className={Styles.Response}>Response</div>
+        <Image src="/API/SearchResultsImage.svg" className={Styles.ResponseImage} width={10000} height={10000}/>
+        <div className={Styles.HR}></div>
         </>
     )
 }
