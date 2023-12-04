@@ -7,7 +7,7 @@ export default async function Scroller(){
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
     const GET = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).range(0,15);
     const WebSeries = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","WebSeries").range(0,15);
-    const Shows = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_BSE_DRAMAS_NAME).select('Image,Title,ID').order('ID', { ascending: false }).range(0,15);
+    const Shows = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_BSE_DRAMAS_NAME).select('CoverImage,Title,ID').order('ID', { ascending: false }).range(0,15);
     const Movies = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","Movies").range(0,15);
     const Songs = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","Songs").range(0,15);
     const Comedy = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Comedy").range(0,15);
