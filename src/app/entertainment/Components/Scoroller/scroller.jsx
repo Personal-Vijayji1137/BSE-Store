@@ -2,10 +2,12 @@
 import Styles from "./render.module.css"
 import { createClient } from "@supabase/supabase-js";
 import Render from "./scrollerrender";
+import ShowsRender from "./ShowsRender";
 export default async function Scroller(){
     const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
     const GET = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).range(0,15);
     const WebSeries = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","WebSeries").range(0,15);
+    const Shows = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_BSE_DRAMAS_NAME).select('Image,Title,ID').order('ID', { ascending: false }).range(0,15);
     const Movies = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","Movies").range(0,15);
     const Songs = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("MainCategory","Songs").range(0,15);
     const Comedy = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Comedy").range(0,15);
@@ -14,12 +16,12 @@ export default async function Scroller(){
     const Drama = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Drama").range(0,15);
     const Romantic = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Romantic").range(0,15);
     const Adventure = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq("Geans","Adventure").range(0,15);
-
     return(
         <>
         <div className={Styles.fnvbsjdbvdfjhbvuhef}>
             <Render Data={[GET.data,"Recent Uploaded ...","/entertainment/viewall/recent/1"]}/>
             <Render Data={[WebSeries.data,"Web Series ...","/entertainment/viewall/MainCategory/WebSeries/1"]}/>
+            <ShowsRender Data={[Shows.data,"Shows ...","/entertainment/viewall/MainCategory/WebSeries/1"]}/>
             <Render Data={[Movies.data,"Movies ...","/entertainment/viewall/MainCategory/Movies/1"]}/>
             <Render Data={[Songs.data,"Songs ...","/entertainment/viewall/MainCategory/Songs/1"]}/>
             <Render Data={[Comedy.data,"Comedy ...","/entertainment/viewall/Geans/Comedy/1"]}/>

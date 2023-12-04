@@ -19,6 +19,7 @@ export const metadata = {
     images: ['https://i.postimg.cc/FsQ1DCcG/opengraph-image.png'],
   }
 }
+export const dynamic = 'force-dynamic'
 export default function Entertainment(){
   return (
     <>
