@@ -25,7 +25,7 @@ export default function Search({ params }){
                 <div className={Styles.Results}>Results</div>
                 {Data.map((item)=>{
                     return <Link href={`/entertainment/player/${item.ID}/${item.Title.split(" ").join("-")}`} key={item.ID} className={Styles.SinglePost}>
-                        <div><Image src={item.Image} width={400} height={400} alt=""/></div>
+                        <div><Image src={item.Image} width={50} height={50} alt=""/></div>
                         <div>
                             <div>{item.Title}</div>
                         </div>
