@@ -21,7 +21,7 @@ export default async function Scroller(){
         <div className={Styles.fnvbsjdbvdfjhbvuhef}>
             <Render Data={[GET.data,"Recent Uploaded ...","/entertainment/viewall/recent/1"]}/>
             <Render Data={[WebSeries.data,"Web Series ...","/entertainment/viewall/MainCategory/WebSeries/1"]}/>
-            <ShowsRender Data={[Shows.data,"Shows ...","/entertainment/viewall/MainCategory/WebSeries/1"]}/>
+            <ShowsRender Data={[Shows.data,"Shows ...","/entertainment/viewall/drama/1"]}/>
             <Render Data={[Movies.data,"Movies ...","/entertainment/viewall/MainCategory/Movies/1"]}/>
             <Render Data={[Songs.data,"Songs ...","/entertainment/viewall/MainCategory/Songs/1"]}/>
             <Render Data={[Comedy.data,"Comedy ...","/entertainment/viewall/Geans/Comedy/1"]}/>

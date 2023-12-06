@@ -31,7 +31,7 @@ export default async function Page({ params }){
     const Date = GET.data[0];
     var Iframe ;
     const resentdata = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).range(0,15);
-    const res = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq('MainCategory' , `${Date.MainCategory}`).range(0,30);
+    const res = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('ID,Title,Image').order('ID', { ascending: false }).eq('MainCategory' , `${Date.MainCategory}`).eq('Geans',`${Date.Geans}`).range(0,30);
     const resentada = resentdata.data;
     const datada = res.data;
     if(Date.Plateform == "filemoon"){

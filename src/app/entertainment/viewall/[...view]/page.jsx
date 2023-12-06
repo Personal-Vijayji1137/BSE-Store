@@ -28,6 +28,43 @@ export default async function Page({ params }){
         }else{
             next = `/entertainment/viewall/recent/${page+1}`
         }
+    }else if(params.view[0] == "drama"){
+        page = +params.view[1];
+        var Start = (page - 1)*49;
+        var End = page*49;
+        if(page <= 1 ){
+            back = `/entertainment/viewall/drama/1`
+        }else{
+            back = `/entertainment/viewall/drama/${page-1}`
+        }
+        GET = (await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_BSE_DRAMAS_NAME).select('CoverImage,Title,ID').order('ID', { ascending: false }).range(Start,End));
+        if(GET.data.length < 50){
+            next = `/entertainment/viewall/drama/${page}`
+        }else{
+            next = `/entertainment/viewall/drama/${page+1}`
+        }
+        const Data = GET.data;
+        return(
+            <>
+            <div className='mt-24'>
+                <div className='m-5'>
+                    <div className={Styles.viewgrid}>
+                        {Data.map((item)=>{
+                            return <div key={item.ID}>
+                                <Link href={`/entertainment/drama/${item.ID}/${item.Title.split(" ").join("-")}`}><Image priority={true} className={Styles.Images} src={item.CoverImage} alt={item.Title} title={item.Title} width={300} height={300} /></Link>
+                            </div>
+                        })}
+                    </div>
+                </div>
+            </div>
+            <div className={Styles.Button}>
+                <Link className="bg-red-700 p-2 rounded-md m-3 text-center" style={{ width: '100px' }} href={back}>{page === 1 ? 'First Page' : 'Back'}</Link>
+                <button className="bg-red-700 p-2 rounded-md m-3" style={{ width: '60px' }} disabled>{page}</button>
+                <Link className="bg-red-700 p-2 rounded-md m-3 text-center" style={{ width: '100px' }} href={next}>{Data.length < 50 ? 'Last Page' : 'Next'}</Link>
+            </div>
+            <DirectLink/>
+            </>
+        )
     }else{
         var Start = (page - 1)*49;
         var End = page*49;

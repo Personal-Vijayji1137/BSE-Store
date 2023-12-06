@@ -92,10 +92,12 @@
 .Images {
     border-radius: 5px;
     width: 100%;
-    height: 100%;
+    height: auto;
     cursor: pointer;
     position: relative;
     transition: ease 0.3s;
+    object-fit: cover;
+    aspect-ratio: 16/9;
 }
 .Images:hover {
     transform: scale(1.2);
