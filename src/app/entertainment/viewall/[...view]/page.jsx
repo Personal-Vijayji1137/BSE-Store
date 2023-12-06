@@ -54,7 +54,7 @@ export default async function Page({ params }){
                 <div className={Styles.viewgrid}>
                     {Data.map((item)=>{
                         return <div key={item.ID}>
-                            <Link href={`/entertainment/player/${item.ID}/${item.Title.split(" ").join("-")}`}><Image className={Styles.Images} src={item.Image} alt={item.Title} title={item.Title} width={300} height={300} /></Link>
+                            <Link href={`/entertainment/player/${item.ID}/${item.Title.split(" ").join("-")}`}><Image priority={true} className={Styles.Images} src={item.Image} alt={item.Title} title={item.Title} width={300} height={300} /></Link>
                         </div>
                     })}
                 </div>

@@ -49,6 +49,8 @@
     cursor: pointer;
     transition-duration: 0.3s;
     position: relative;
+    object-fit: cover;
+    aspect-ratio: 16/9;
 }
 .Images:hover {
     transform: scale(1.2);
