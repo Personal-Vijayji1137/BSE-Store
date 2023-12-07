@@ -7,13 +7,9 @@ html,body{
 	scroll-behavior: smooth;
 	max-width: 100vw;
 }
-body::-webkit-scrollbar{
-	width: 6px;
-	background-color: #262a2e;
-}
-body::-webkit-scrollbar-thumb{
-	border-radius: 10px;
-	background-color: #000000;
+*::-webkit-scrollbar{
+	width: 0;
+    height: 0;
 }
 .Tab{
 	display: none;

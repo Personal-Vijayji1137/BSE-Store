@@ -7,9 +7,25 @@
     width: 49%;
     margin-left: 1%;
     margin-top: -50px;
+    position: relative;
+    left: -50%;
+    animation: slideFromLeft 1.5s ease-out forwards;
 }
 .DivTwo{
     width: 50%;
+    position: relative;
+    right: -50%;
+    animation: slideFromLRight 1.5s ease-out forwards;
+}
+@keyframes slideFromLeft {
+    to {
+      left: 0%;
+    }
+}
+@keyframes slideFromLRight {
+    to {
+      right: 0%;
+    }
 }
 .BannerImage{
     width: 100%;

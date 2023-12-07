@@ -18,6 +18,8 @@
     border: 1px solid rgba(0, 255, 255, 0.459);
     box-shadow: rgba(255, 0, 0, 0.473) 0px 4px 8px -2px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     transition: 2s ease;
+    object-fit: cover;
+    aspect-ratio: 16/9;
 }
 .BlogMainBanner > div:nth-child(2) > img:hover{
     scale: 1.001;
