@@ -57,7 +57,7 @@ export default function Footer(){
                 </div>
             </div>
         </div>
-        <Image className={Styles.BGImage} src="/Footer.webp" width={2000} height={2000} alt=""/>
+        {/* <Image className={Styles.BGImage} src="/Footer.webp" width={2000} height={2000} alt=""/> */}
         </>
     )
 }
