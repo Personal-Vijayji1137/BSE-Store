@@ -1,18 +1,10 @@
-'use client'
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./homenav.module.css"
-import AOS from "aos"
-import { useEffect } from "react"
 export default function HomeNav(){
-    useEffect(()=>{
-        AOS.init({
-            duration: 900,
-        });
-    },[])
     return(
         <>
-            <nav className={styles.homenav} data-aos="fade-down">
+            <nav className={styles.homenav}>
                 <div className={styles.nav}>
                     <div className={styles.divlog}>
                         <Link href="/" className={styles.divlog}>

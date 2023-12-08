@@ -5,7 +5,6 @@ import HomeNav from './Components/HomeNav/honenav'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import 'aos/dist/aos.css';
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   metadataBase: new URL('https://bsestore.vercel.app/'),
