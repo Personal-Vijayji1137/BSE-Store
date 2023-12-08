@@ -7,7 +7,7 @@ import { useEffect } from "react"
 export default function HomeNav(){
     useEffect(()=>{
         AOS.init({
-            duration: 1500,
+            duration: 900,
         });
     },[])
     return(

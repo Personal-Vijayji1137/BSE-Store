@@ -6,7 +6,7 @@ export default function Footer(){
     return(
         <>
         <AdsBanner/>
-        <div id="Footer" className={Styles.Footer} data-aos="fade-up">
+        <div id="Footer" className={Styles.Footer}>
             <div>
                 <div>
                     <div>
