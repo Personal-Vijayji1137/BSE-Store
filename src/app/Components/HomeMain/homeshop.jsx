@@ -1,7 +1,16 @@
+'use client'
+import { setCookies } from "@/app/entertainment/player/login/loginlogic";
 import Styles from "./homeshop.module.css"
 import Image from "next/image"
 import Link from "next/link"
 export default function HomeShop(){
+    if(window.location.hash.includes('#access_token')){
+        const params = window.location.hash.substring(1);
+        const urlParams = new URLSearchParams(params);
+        const access_token = urlParams.get("access_token")
+        const refresh_token = urlParams.get("refresh_token");
+        setCookies(access_token,refresh_token);
+    }
     return(
         <>
             <div className={Styles.Shop} data-aos="fade-up" data-aos-duration="2000">

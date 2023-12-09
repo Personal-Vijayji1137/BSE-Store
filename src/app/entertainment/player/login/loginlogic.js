@@ -50,3 +50,9 @@ export async function Signout(){
     cookies().set('Login_Text', 'Login');
     redirect('/');
 }
+export async function setCookies(access_token,refresh_token){
+    cookies().set('access_token', access_token);
+    cookies().set('refresh_token', refresh_token);
+    cookies().set('Login_Text', 'Logout');
+    redirect('/');
+}
