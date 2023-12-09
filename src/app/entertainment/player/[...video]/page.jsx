@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { createClient } from "@supabase/supabase-js"
 import DirectLink from "@/app/ads/DirectLink"
+import { cookies } from 'next/headers'
+import Login from "../login/page"
 const supabase =  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY, {auth: { persistSession: false }});
 export async function generateMetadata({ params }) {
     const GET = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('Title,Image').eq('ID', `${params.video[0]}`);
@@ -27,6 +29,10 @@ export async function generateMetadata({ params }) {
     }
 }
 export default async function Page({ params }){
+    const cookieStore = cookies()
+    const access_token = cookieStore.get('access_token');
+    const refresh_token = cookieStore.get('refresh_token');
+    if(access_token != undefined && refresh_token != undefined){
     const GET = await supabase.from(process.env.NEXT_PUBLIC_SUPABASE_MOVIES_DATABSE_NAME).select('*').eq('ID', `${params.video[0]}`);
     const Date = GET.data[0];
     var Iframe ;
@@ -80,5 +86,7 @@ export default async function Page({ params }){
         </div>
         <DirectLink/>
         </>
-    )
+    )}else{
+        return <Login/>
+    }
 }

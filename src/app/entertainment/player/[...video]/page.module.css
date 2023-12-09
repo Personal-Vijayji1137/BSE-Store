@@ -103,6 +103,87 @@
     transform: scale(1.2);
     z-index: 1;
 }
+.Body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    margin: 0;
+}
+.Body > h2{
+    color: white;
+    font-size: 3vw;
+    font-family: 'Concert One', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.Form > label{
+    color: white;
+    margin-top: 2vw;
+}
+.Form > div{
+    text-align: right;
+    color: rgb(187, 187, 187);
+    font-size: 1vw;
+    margin-top: 1vw;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Input {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1vw;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.Button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fde000;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: ease 1s;
+}
+.Button:hover {
+    background-color: #fddf00ad;
+}
+.socialbuttons {
+    text-align: center;
+    width: 300px;
+}
+.socialbuttons > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.socialbuttons > div > button{
+    padding: 10px;
+    background-color: #fde000;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.socialbuttons > h3{
+    color: white;
+    font-size: 2vw;
+    font-family: 'Concert One', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 @media screen and (min-width: 0px) and (max-width: 1000px) {
     .Maindiv{
         margin: 0.5rem;

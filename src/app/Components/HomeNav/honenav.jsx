@@ -1,7 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./homenav.module.css"
+import { cookies } from 'next/headers'
 export default function HomeNav(){
+    const access_token = cookies().get('access_token');
     return(
         <>
             <nav className={styles.homenav}>
@@ -42,7 +44,7 @@ export default function HomeNav(){
                             <div><Link href="/about" className={styles.LinkText}>About</Link></div>
                         </ul>
                         </div>
-                        <button className={styles.signinbtn}>Login</button>
+                        <Link className={styles.signinbtn} href={`/entertainment/player/${access_token?"logout":"login"}`}>{access_token?"Logout":"Login"}</Link>
                         </div>
                     </div>
                 </div>

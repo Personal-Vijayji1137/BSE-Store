@@ -21,12 +21,12 @@ export default function HomeMain(){
                     <Image className={Styles.BannerImage} src="/HomeBanner.png" width={1000} height={1000} alt=""/>
                 </div>
            </main>
-           <p className={Styles.Paragra} data-aos="fade-up" data-aos-duration="2000">Explore a diverse online platform offering shopping, blogging, movies, earning, and free courses. Your all-in-one destination for endless possibilities and learning</p>
-           <div className={Styles.BottomBanner} data-aos="flip-left">
+           <p className={Styles.Paragra}>Explore a diverse online platform offering shopping, blogging, movies, earning, and free courses. Your all-in-one destination for endless possibilities and learning</p>
+           <div className={Styles.BottomBanner}>
                <Image src="/BottomBanner.svg" width={1000} height={1000} alt=""/>
            </div>
            <div className={Styles.AboutBSE}>
-            <div data-aos="fade-right">
+            <div>
                 <div data-aos="fade-right">
                     <div data-aos="fade-right">
                         <Image data-aos="fade-right" src="/B-Red.png" width={500} height={500} alt=""/>
@@ -38,7 +38,7 @@ export default function HomeMain(){
                     <p data-aos="fade-right">Our blog is a treasure trove of insightful articles, tutorials, and tips on programming, development, and technology</p>
                 </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="2000">
+            <div>
                 <div data-aos="fade-up" data-aos-duration="2000">
                     <div data-aos="fade-up" data-aos-duration="2000">
                         <Image data-aos="fade-up" data-aos-duration="2000" src="/G-Green.png" width={500} height={500} alt=""/>
@@ -50,7 +50,7 @@ export default function HomeMain(){
                     <p data-aos="fade-up" data-aos-duration="2000">Explore an exquisite collection of the latest fashion, electronics, home decor, and more.Shop smarter, shop with us.</p>
                 </div>
             </div>
-            <div data-aos="fade-left">
+            <div>
                 <div data-aos="fade-left">
                     <div data-aos="fade-left">
                         <Image data-aos="fade-left" src="/Y-Yellow.png" width={500} height={500} alt=""/>
@@ -63,12 +63,12 @@ export default function HomeMain(){
                 </div>
             </div>
            </div>        
-           <div className={Styles.OurBlog}  data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+           <div className={Styles.OurBlog}>
                 <div>Our Blogs</div>
                 <Link href="/blogs" className={Styles.Btn}>All Articles</Link>
             </div>
            <div className={Styles.OurBlogs}>
-                <div data-aos="fade-up" data-aos-duration="2000">
+                <div>
                     <div data-aos="fade-up" data-aos-duration="2000">
                         <Image src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500} alt=""/>
                     </div>
@@ -76,7 +76,7 @@ export default function HomeMain(){
                     <p data-aos="fade-up" data-aos-duration="2000">Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
                     <button data-aos="fade-up" data-aos-duration="2000" className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="2000">
+                <div>
                     <div data-aos="fade-up" data-aos-duration="2000">
                         <Image data-aos="fade-up" data-aos-duration="2000" src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500} alt=""/>
                     </div>
@@ -84,7 +84,7 @@ export default function HomeMain(){
                     <p data-aos="fade-up" data-aos-duration="2000">Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
                     <button data-aos="fade-up" data-aos-duration="2000" className={Styles.ReadMoreBtn}>Read More &#x2794;</button>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="2000">
+                <div>
                     <div data-aos="fade-up" data-aos-duration="2000">
                         <Image data-aos="fade-up" data-aos-duration="2000" src="https://i.ytimg.com/vi/qXeT4KARlkU/maxresdefault.jpg" width={500} height={500} alt=""/>
                     </div>
