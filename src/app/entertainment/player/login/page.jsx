@@ -17,9 +17,9 @@ const Login = () => {
         if(currentPath == '/entertainment/player/login'){
           location.href="/entertainment"
         }
-        console.log(currentPath);
     }else{
-        Loginwithnewemailid(email,password);
+        const messages = await Loginwithnewemailid(email,password);
+        message(messages);
     }
   };
   const loginWithSocial = (provider) => {

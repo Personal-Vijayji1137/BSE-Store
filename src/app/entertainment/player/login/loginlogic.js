@@ -8,6 +8,7 @@ export async function Loginwithnewemailid(email,password){
         email: email,
         password: password,
     })
+    return "Please Verify your Email ... || We have send you URL to Verify"
 }
 export async function Loginold(email,password){ 
     const data = await supabase.auth.signInWithPassword({
@@ -15,7 +16,7 @@ export async function Loginold(email,password){
         password: password,
     })
     if(data.error){
-        return 'Please verify your email ID'
+        return 'Invalid login credentials OR Email not Verified ...'
     }
     const access_token = data.data.session.access_token;
     const refresh_token = data.data.session.refresh_token; 
