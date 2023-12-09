@@ -25,6 +25,7 @@ export async function Loginold(email,password){
     })
     cookies().set('access_token', access_token);
     cookies().set('refresh_token', refresh_token);
+    cookies().set('Login_Text', 'Logout');
     return "Please Wait ...";
 }
 export async function LoginWithGithub(){
@@ -41,12 +42,10 @@ export async function LoginWithLinkkedin(){
 }
 export async function Signout(){
     const { error } = await supabase.auth.signOut();
-    const access_token = cookies().delete('access_token');
-    const refresh_token = cookies().delete('refresh_token');
-    if(access_token && refresh_token){
-        cookies().delete('access_token');
-        cookies().delete('refresh_token');
-    }else{
-        redirect('/');
-    }
+    cookies().delete('access_token');
+    cookies().delete('refresh_token');
+    cookies().delete('access_token');
+    cookies().delete('refresh_token');
+    cookies().set('Login_Text', 'Login');
+    redirect('/');
 }

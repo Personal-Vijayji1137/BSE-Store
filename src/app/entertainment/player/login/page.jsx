@@ -13,7 +13,11 @@ const Login = () => {
     if(btn=='Login'){
         const messages = await Loginold(email,password);
         message(messages);
-        location.reload();
+        const currentPath = window.location.pathname;
+        if(currentPath == '/entertainment/player/login'){
+          location.href="/entertainment"
+        }
+        console.log(currentPath);
     }else{
         Loginwithnewemailid(email,password);
     }

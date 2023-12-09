@@ -1,9 +1,10 @@
+'use server'
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./homenav.module.css"
 import { cookies } from 'next/headers'
-export default function HomeNav(){
-    const access_token = cookies().get('access_token');
+export default async function HomeNav(){
+    const Login_Text = cookies().get('Login_Text');
     return(
         <>
             <nav className={styles.homenav}>
@@ -44,7 +45,7 @@ export default function HomeNav(){
                             <div><Link href="/about" className={styles.LinkText}>About</Link></div>
                         </ul>
                         </div>
-                        <Link className={styles.signinbtn} href={`/entertainment/player/${access_token?"logout":"login"}`}>{access_token?"Logout":"Login"}</Link>
+                        <Link className={styles.signinbtn} href={`/entertainment/player/${Login_Text?Login_Text.value=="Login"?"login":"logout":"login"}`}>{Login_Text?`${Login_Text.value}`:"Login"}</Link>
                         </div>
                     </div>
                 </div>
