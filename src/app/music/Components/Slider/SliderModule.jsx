@@ -26,7 +26,7 @@ export default function SliderPost({Data,Text}){
             <button className={Styles.ScrollLeft} onClick={handelScrollLeft}>&nbsp;&nbsp; &#x276E;&#x276E; &nbsp;&nbsp;&nbsp;&nbsp;</button>
                 {Data.map((item) => (
                     <div key={item.id} className={Styles.OneImage}>
-                        <Link href={`/music/player/${item.id}/${item.name.split(" ").join("-")}`}><Image className={Styles.Images} src={item.image} alt={`Image ${item.id}`} title={item.name} width={200} height={200} /></Link>
+                        <Link href={`/music/player/${item.id}/${item.name.split(" ").join("-")}/${item.image.split('/').join('---')}`}><Image className={Styles.Images} src={item.image} alt={`Image ${item.id}`} title={item.name} width={200} height={200} /></Link>
                     </div>
                 ))}
             <button className={Styles.ScrollRight} onClick={handelScrollRight}>&nbsp;&nbsp;&nbsp;&nbsp; &#x276F;&#x276F; &nbsp;&nbsp;</button>
