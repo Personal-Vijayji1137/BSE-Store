@@ -1,0 +1,18 @@
+.MainDiv{
+    display: flex;
+    justify-content: space-around;
+}
+.MusicPlayer{
+    width: 75vw;
+    height: 100vh;
+    border: none;
+    border-radius: 10px;
+}
+.MainDiv > div{
+    width: 20vw;
+    border-radius: 10px;
+    background-color: #282828;
+}
+.RightMain{
+    display: flex;
+}

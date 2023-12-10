@@ -1,7 +1,11 @@
-export default function Music(){
+'use server'
+import { FeaturedPlaylists } from "./AllServerRequests"
+import SliderPost from "./Components/Slider/SliderModule";
+export default async function Music(){
+    const FeaturePlaylist = await FeaturedPlaylists('https://api.spotify.com/v1/browse/featured-playlists?limit=50');
     return(
         <>
-            <iframe style={{borderRadius:'12px'}} src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUfTFmNBRM?utm_source=generator&theme=0" width="100%" height="1000" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <SliderPost Data={FeaturePlaylist}/>
         </>
     )
 }
