@@ -6,7 +6,7 @@ export default function Footer(){
     return(
         <>
         <AdsBanner/>
-        <div id="Footer" className={Styles.Footer}>
+        <div id="Footer" className={Styles.Footer} style={{ backgroundImage: `url(/Footer.webp)`}}>
             <div>
                 <div>
                     <div>
@@ -29,6 +29,7 @@ export default function Footer(){
                             <Link href="/music"><li>Music</li></Link>
                             <Link href="/reels"><li>Reels</li></Link>
                             <Link href="/earn"><li>Earn</li></Link>
+                            <Link href="/api"><li>API Docs</li></Link>
                             <Link href="/contact"><li>Contact</li></Link>
                             <Link href="/about"><li>About</li></Link>
                         </ul>
@@ -57,7 +58,6 @@ export default function Footer(){
                 </div>
             </div>
         </div>
-        <Image className={Styles.BGImage} src="/Footer.webp" width={2000} height={2000} alt=""/>
         </>
     )
 }
