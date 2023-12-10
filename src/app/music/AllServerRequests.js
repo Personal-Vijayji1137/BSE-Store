@@ -9,7 +9,7 @@ export async function GetToken(){
         'grant_type': 'client_credentials',
         'client_id': clientId,
         'client_secret': clientSecret,
-      }),{headers: {'Content-Type': 'application/x-www-form-urlencoded'}}
+      }),{headers: {'Content-Type': 'application/x-www-form-urlencoded'}},{ next: { revalidate: 3600 } }
     );
     const data = response.data;
     Access_Token = data.access_token;
@@ -17,7 +17,7 @@ export async function GetToken(){
 }
 export async function FeaturedPlaylists(url){
     const Token = await GetToken();
-    const response = await axios.get(url, {headers: {'Authorization': `Bearer ${Token}`}});
+    const response = await axios.get(url, {headers: {'Authorization': `Bearer ${Token}`}},{ next: { revalidate: 100000 } });
     const data = response.data.playlists.items;
     let ArrData = [];
     data.map((item)=>{
