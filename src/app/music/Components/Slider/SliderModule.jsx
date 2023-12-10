@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Styles from "./SliderModule.module.css"
-export default function SliderPost({Data}){
+export default function SliderPost({Data,Text}){
     const containerRef = useRef(null);
     const handelScrollLeft = ()=>{
         if(containerRef.current){
@@ -20,7 +20,7 @@ export default function SliderPost({Data}){
     return (
         <div>
             <div className={Styles.customContainer}>
-                <span>Welcome to Music ...</span>
+                <span>{Text} ...</span>
             </div>
             <div ref={containerRef} className={Styles.Conainer}>
             <button className={Styles.ScrollLeft} onClick={handelScrollLeft}>&nbsp;&nbsp; &#x276E;&#x276E; &nbsp;&nbsp;&nbsp;&nbsp;</button>

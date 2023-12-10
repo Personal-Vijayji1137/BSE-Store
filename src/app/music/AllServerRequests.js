@@ -21,12 +21,14 @@ export async function FeaturedPlaylists(url){
     const data = response.data.playlists.items;
     let ArrData = [];
     data.map((item)=>{
-        let NeedToPush = {};
-        NeedToPush.description = item.description;
-        NeedToPush.name = item.name;
-        NeedToPush.id = item.id;
-        NeedToPush.image = item.images[0].url;
-        ArrData.push(NeedToPush);
+        if(item !== null){
+            let NeedToPush = {};
+            NeedToPush.description = item.description;
+            NeedToPush.name = item.name;
+            NeedToPush.id = item.id;
+            NeedToPush.image = item.images[0].url;
+            ArrData.push(NeedToPush);
+        }
     });
     return ArrData;
 }
