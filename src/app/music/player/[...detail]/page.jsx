@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FeaturedPlaylists } from "../../AllServerRequests"
 import Style from "./detail.module.css"
 export default async function MusicPlayer({ params }){
-    const FeatureData = await FeaturedPlaylists('https://api.spotify.com/v1/browse/featured-playlists?limit=50');
+    const FeatureData = await FeaturedPlaylists('https://api.spotify.com/v1/browse/featured-playlists?limit=50&country=IN');
     return(
         <>
             <div className={Style.MainDiv}>
