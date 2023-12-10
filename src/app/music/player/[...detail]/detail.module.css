@@ -1,18 +1,54 @@
-.MainDiv{
-    display: flex;
-    justify-content: space-around;
-}
 .MusicPlayer{
-    width: 75vw;
+    width: 100vw;
     height: 100vh;
     border: none;
     border-radius: 10px;
 }
-.MainDiv > div{
-    width: 20vw;
-    border-radius: 10px;
-    background-color: #282828;
+.viewgrid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 1rem;
 }
-.RightMain{
-    display: flex;
+.Images {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    position: relative;
+    transition: ease 0.3s;
+    object-fit: cover;
+}
+.Images:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+@media screen and (min-width: 0px) and (max-width: 1100px) {
+    .viewgrid {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+    .viewgrid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .viewgrid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .viewgrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .viewgrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    .viewgrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
