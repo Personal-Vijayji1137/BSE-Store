@@ -36,7 +36,10 @@ export async function LoginWithGithub(){
     redirect(data.data.url);
 }
 export async function LoginWithGoogle(){
-
+    const data = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+    })
+    redirect(data.data.url);
 }
 export async function LoginWithLinkkedin(){
 
