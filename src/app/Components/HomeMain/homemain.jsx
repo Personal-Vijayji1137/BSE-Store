@@ -34,8 +34,8 @@ export default async function HomeMain(){
             <div>
                 <div>
                     <div>
-                        <Image src="/B-Red.png" width={500} height={500} alt=""/>
-                        <Image src="/BB-Red.svg" width={500} height={500} alt=""/>
+                        <Image src="/B-Red.png" width={200} height={200} alt=""/>
+                        <Image src="/BB-Red.svg" width={200} height={200} alt=""/>
                     </div>
                 </div>
                 <div>
@@ -46,8 +46,8 @@ export default async function HomeMain(){
             <div>
                 <div>
                     <div>
-                        <Image src="/G-Green.png" width={500} height={500} alt=""/>
-                        <Image src="/GG-Green.svg" width={500} height={500} alt=""/>
+                        <Image src="/G-Green.png" width={200} height={200} alt=""/>
+                        <Image src="/GG-Green.svg" width={200} height={200} alt=""/>
                     </div>
                 </div>
                 <div>
@@ -58,8 +58,8 @@ export default async function HomeMain(){
             <div>
                 <div>
                     <div>
-                        <Image src="/Y-Yellow.png" width={500} height={500} alt=""/>
-                        <Image src="/YY-Yellow.svg" width={500} height={500} alt=""/>
+                        <Image src="/Y-Yellow.png" width={200} height={200} alt=""/>
+                        <Image src="/YY-Yellow.svg" width={200} height={200} alt=""/>
                     </div>
                 </div>
                 <div>
